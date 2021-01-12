@@ -54,7 +54,7 @@ function Navbar() {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Landings
+                  Companies
                 </a>
                 <div
                   class="dropdown-menu dropdown-menu-xl p-0"
@@ -68,7 +68,7 @@ function Navbar() {
                       >
                         {/* Heading */}
                         <h4 class="fw-bold text-white mb-0">
-                          Want to see an overview?
+                          Overview
                         </h4>
 
                         {/* Text */}
@@ -85,65 +85,32 @@ function Navbar() {
                         </a>
                       </div>
                     </div>
-                    <div class="col-12 col-lg-6">
+                    <div class="col-6 col-lg-6">
                       <div class="dropdown-body">
                         <div class="row gx-0">
                           <div class="col-6">
                             {/* Heading */}
-                            <h6 class="dropdown-header">Services</h6>
+                            <h6 class="dropdown-header">Types</h6>
 
                             {/* List */}
-                            <a class="dropdown-item" href="./coworking.html">
-                              Coworking
+                            <a class="dropdown-item" href="#">
+                            Residential
                             </a>
                             <a class="dropdown-item" href="./rental.html">
-                              Rental
+                            Industrial
                             </a>
                             <a class="dropdown-item mb-5" href="./job.html">
-                              Job Listing
+                            Commercial
+                            </a>
+                            <a class="dropdown-item" href="./rental.html">
+                            Heavy Civil
+                            </a>
+                            <a class="dropdown-item" href="./rental.html">
+                            Marine
                             </a>
 
-                            {/* Heading */}
-                            <h6 class="dropdown-header">Apps</h6>
-
-                            {/* List */}
-                            <a class="dropdown-item" href="./desktop-app.html">
-                              Desktop
-                            </a>
-                            <a class="dropdown-item" href="./mobile-app.html">
-                              Mobile
-                            </a>
                           </div>
-                          <div class="col-6">
-                            {/* Heading */}
-                            <h6 class="dropdown-header">Web</h6>
-
-                            {/* List */}
-                            <a class="dropdown-item" href="./index.html">
-                              Basic
-                            </a>
-                            <a class="dropdown-item" href="./startup.html">
-                              Startup
-                            </a>
-                            <a class="dropdown-item" href="./enterprise.html">
-                              Enterprise
-                            </a>
-                            <a class="dropdown-item" href="./service.html">
-                              Service
-                            </a>
-                            <a class="dropdown-item" href="./cloud.html">
-                              Cloud Hosting
-                            </a>
-                            <a class="dropdown-item" href="./agency.html">
-                              Agency
-                            </a>
-                            <a class="dropdown-item" href="./framework.html">
-                              Framework{" "}
-                              <span class="h6 text-uppercase text-primary">
-                                (new)
-                              </span>
-                            </a>
-                          </div>
+                          
                         </div>{" "}
                         {/* / .row */}
                       </div>
@@ -161,147 +128,8 @@ function Navbar() {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Pages
+                  Social
                 </a>
-                <div
-                  class="dropdown-menu dropdown-menu-lg"
-                  aria-labelledby="navbarPages"
-                >
-                  <div class="row gx-0">
-                    <div class="col-6">
-                      <div class="row gx-0">
-                        <div class="col-12 col-lg-6">
-                          {/* Heading */}
-                          <h6 class="dropdown-header">Career</h6>
-
-                          {/* List */}
-                          <a class="dropdown-item" href="./careers.html">
-                            Listing
-                          </a>
-                          <a
-                            class="dropdown-item mb-5"
-                            href="./career-single.html"
-                          >
-                            Opening
-                          </a>
-
-                          {/* Heading */}
-                          <h6 class="dropdown-header">Company</h6>
-
-                          {/* List */}
-                          <a class="dropdown-item" href="./about.html">
-                            About
-                          </a>
-                          <a class="dropdown-item" href="./pricing.html">
-                            Pricing
-                          </a>
-                          <a
-                            class="dropdown-item mb-5 mb-lg-0"
-                            href="./terms-of-service.html"
-                          >
-                            Terms
-                          </a>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                          {/* Heading */}
-                          <h6 class="dropdown-header">Help center</h6>
-
-                          {/* List */}
-                          <a class="dropdown-item" href="./help-center.html">
-                            Overview
-                          </a>
-                          <a
-                            class="dropdown-item mb-5"
-                            href="./help-center-article.html"
-                          >
-                            Article
-                          </a>
-
-                          {/* Heading */}
-                          <h6 class="dropdown-header">Contact</h6>
-
-                          {/* List */}
-                          <a class="dropdown-item" href="./contact.html">
-                            Basic
-                          </a>
-                          <a class="dropdown-item" href="./contact-alt.html">
-                            Cover
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row gx-0">
-                        <div class="col-12 col-lg-6">
-                          {/* Heading */}
-                          <h6 class="dropdown-header">Blog</h6>
-
-                          {/* List */}
-                          <a class="dropdown-item" href="./blog.html">
-                            Rich View
-                          </a>
-                          <a class="dropdown-item" href="./blog-post.html">
-                            Article
-                          </a>
-                          <a class="dropdown-item" href="./blog-showcase.html">
-                            Showcase
-                          </a>
-                          <a
-                            class="dropdown-item mb-5 mb-lg-0"
-                            href="./blog-search.html"
-                          >
-                            Search
-                          </a>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                          {/* Heading */}
-                          <h6 class="dropdown-header">Portfolio</h6>
-
-                          {/* List */}
-                          <a
-                            class="dropdown-item"
-                            href="./portfolio-masonry.html"
-                          >
-                            Masonry
-                          </a>
-                          <a
-                            class="dropdown-item"
-                            href="./portfolio-grid-rows.html"
-                          >
-                            Grid Rows
-                          </a>
-                          <a
-                            class="dropdown-item"
-                            href="./portfolio-parallax.html"
-                          >
-                            Parallax
-                          </a>
-                          <a
-                            class="dropdown-item"
-                            href="./portfolio-case-study.html"
-                          >
-                            Case Study
-                          </a>
-                          <a
-                            class="dropdown-item"
-                            href="./portfolio-sidebar.html"
-                          >
-                            Sidebar
-                          </a>
-                          <a
-                            class="dropdown-item"
-                            href="./portfolio-sidebar-fluid.html"
-                          >
-                            Sidebar: Fluid
-                          </a>
-                          <a class="dropdown-item" href="./portfolio-grid.html">
-                            Basic Grid
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>{" "}
                 {/* / .row */}
               </li>
               <li class="nav-item dropdown">
@@ -313,162 +141,8 @@ function Navbar() {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Account
+                  Blog
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarAccount">
-                  <li class="dropdown-item dropend">
-                    <a
-                      class="dropdown-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                      href="#"
-                    >
-                      Settings
-                    </a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="./account-general.html">
-                        General
-                      </a>
-                      <a class="dropdown-item" href="./account-security.html">
-                        Security
-                      </a>
-                      <a
-                        class="dropdown-item"
-                        href="./account-notifications.html"
-                      >
-                        Notifications
-                      </a>
-                      <a
-                        class="dropdown-item"
-                        href="./billing-plans-and-payment.html"
-                      >
-                        Plans & Payment
-                      </a>
-                      <a class="dropdown-item" href="./billing-users.html">
-                        Users
-                      </a>
-                    </div>
-                  </li>
-                  <li class="dropdown-item dropend">
-                    <a
-                      class="dropdown-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                      href="#"
-                    >
-                      Sign In
-                    </a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="./signin-cover.html">
-                        Side Cover
-                      </a>
-                      <a
-                        class="dropdown-item"
-                        href="./signin-illustration.html"
-                      >
-                        Illustration
-                      </a>
-                      <a class="dropdown-item" href="./signin.html">
-                        Basic
-                      </a>
-                      <a
-                        class="dropdown-item"
-                        data-bs-toggle="modal"
-                        href="#modalSigninHorizontal"
-                      >
-                        Modal Horizontal
-                      </a>
-                      <a
-                        class="dropdown-item"
-                        data-bs-toggle="modal"
-                        href="#modalSigninVertical"
-                      >
-                        Modal Vertical
-                      </a>
-                    </div>
-                  </li>
-                  <li class="dropdown-item dropend">
-                    <a
-                      class="dropdown-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                      href="#"
-                    >
-                      Sign Up
-                    </a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="./signup-cover.html">
-                        Side Cover
-                      </a>
-                      <a
-                        class="dropdown-item"
-                        href="./signup-illustration.html"
-                      >
-                        Illustration
-                      </a>
-                      <a class="dropdown-item" href="./signup.html">
-                        Basic
-                      </a>
-                      <a
-                        class="dropdown-item"
-                        data-bs-toggle="modal"
-                        href="#modalSignupHorizontal"
-                      >
-                        Modal Horizontal
-                      </a>
-                      <a
-                        class="dropdown-item"
-                        data-bs-toggle="modal"
-                        href="#modalSignupVertical"
-                      >
-                        Modal Vertical
-                      </a>
-                    </div>
-                  </li>
-                  <li class="dropdown-item dropend">
-                    <a
-                      class="dropdown-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                      href="#"
-                    >
-                      Password Reset
-                    </a>
-                    <div class="dropdown-menu">
-                      <a
-                        class="dropdown-item"
-                        href="./password-reset-cover.html"
-                      >
-                        Side Cover
-                      </a>
-                      <a
-                        class="dropdown-item"
-                        href="./password-reset-illustration.html"
-                      >
-                        Illustration
-                      </a>
-                      <a class="dropdown-item" href="./password-reset.html">
-                        Basic
-                      </a>
-                    </div>
-                  </li>
-                  <li class="dropdown-item dropend">
-                    <a
-                      class="dropdown-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                      href="#"
-                    >
-                      Error
-                    </a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="./error-cover.html">
-                        Side Cover
-                      </a>
-                      <a class="dropdown-item" href="./error-illustration.html">
-                        Illustration
-                      </a>
-                      <a class="dropdown-item" href="./error.html">
-                        Basic
-                      </a>
-                    </div>
-                  </li>
-                </ul>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -479,7 +153,7 @@ function Navbar() {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Documentation
+                  Contacts
                 </a>
                 <div
                   class="dropdown-menu dropdown-menu-md"
