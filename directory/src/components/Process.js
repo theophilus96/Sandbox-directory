@@ -1,4 +1,7 @@
 import React from "react";
+import ConstructionImage3 from "../img/construction3.jpg";
+import ConstructionImage4 from "../img/construction4.jpg";
+import ConstructionImage5 from "../img/construction5.jpg";
 
 function Process() {
   return (
@@ -12,9 +15,7 @@ function Process() {
               <h6 className="text-uppercase text-primary fw-bold">Process</h6>
 
               {/* Heading */}
-              <h2>
-                Our process to find you a solution is fast and easy.
-              </h2>
+              <h2>Our process to find you a solution is fast and easy.</h2>
 
               {/* Text */}
               <p className="lead text-muted mb-6 mb-md-0">
@@ -32,9 +33,14 @@ function Process() {
                     data-aos-delay="100"
                   >
                     <img
-                      src="assets/img/photos/photo-13.jpg"
+                      src={ConstructionImage3}
                       className="img-fluid"
                       alt="..."
+                      style={{
+                        backgroundImage: `url(${ConstructionImage3})`,
+                        backgroundSize: "cover",
+                        maxWidth: "100%",
+                      }}
                     />
                   </div>
                 </div>
@@ -45,7 +51,7 @@ function Process() {
                     data-aos="fade-up"
                   >
                     <img
-                      src="assets/img/photos/photo-14.jpg"
+                      src={ConstructionImage4}
                       className="img-fluid"
                       alt="..."
                     />
@@ -59,7 +65,7 @@ function Process() {
                     data-aos-delay="150"
                   >
                     <img
-                      src="assets/img/photos/photo-15.jpg"
+                      src={ConstructionImage5}
                       className="img-fluid"
                       alt="..."
                     />

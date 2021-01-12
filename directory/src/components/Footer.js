@@ -1,4 +1,9 @@
 import React from "react";
+import FacebookLogo from "../icons/facebook.svg";
+import TwitterLogo from "../icons/twitter.svg";
+import InstagramLogo from "../icons/instagram.svg";
+import PinterestLogo from "../icons/pinterest.svg";
+import SandBoxLogo from "../icons/SandboxLogo.png";
 
 function Footer() {
   return (
@@ -10,7 +15,7 @@ function Footer() {
             <div className="col-12 col-md-4 col-lg-3">
               {/* Brand */}
               <img
-                src="./assets/img/brand.svg"
+                src={SandBoxLogo}
                 alt="..."
                 className="footer-brand img-fluid mb-2"
               />
@@ -23,7 +28,7 @@ function Footer() {
                 <li className="list-inline-item list-social-item me-3">
                   <a href="#!" className="text-decoration-none">
                     <img
-                      src="./assets/img/icons/social/instagram.svg"
+                      src={InstagramLogo}
                       className="list-social-icon"
                       alt="..."
                     />
@@ -32,7 +37,7 @@ function Footer() {
                 <li className="list-inline-item list-social-item me-3">
                   <a href="#!" className="text-decoration-none">
                     <img
-                      src="./assets/img/icons/social/facebook.svg"
+                      src={FacebookLogo}
                       className="list-social-icon"
                       alt="..."
                     />
@@ -41,7 +46,7 @@ function Footer() {
                 <li className="list-inline-item list-social-item me-3">
                   <a href="#!" className="text-decoration-none">
                     <img
-                      src="./assets/img/icons/social/twitter.svg"
+                      src={TwitterLogo}
                       className="list-social-icon"
                       alt="..."
                     />
@@ -50,7 +55,7 @@ function Footer() {
                 <li className="list-inline-item list-social-item">
                   <a href="#!" className="text-decoration-none">
                     <img
-                      src="./assets/img/icons/social/pinterest.svg"
+                      src={PinterestLogo}
                       className="list-social-icon"
                       alt="..."
                     />

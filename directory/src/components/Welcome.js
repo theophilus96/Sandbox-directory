@@ -1,7 +1,6 @@
 import React from "react";
 import ConstructionImage from "../img/construction2.jpg";
-// import "../css/theme.css"
-// import "../css/libs.css"
+
 
 function Welcome() {
   return (

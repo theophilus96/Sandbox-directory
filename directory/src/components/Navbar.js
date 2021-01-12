@@ -1,4 +1,5 @@
 import React from "react";
+import SandBoxLogo from "../icons/SandboxLogo.png";
 
 function Navbar() {
   return (
@@ -9,7 +10,7 @@ function Navbar() {
           {/* Brand */}
           <a className="navbar-brand" href="./index.html">
             <img
-              src="./assets/img/brand.svg"
+              src={SandBoxLogo}
               className="navbar-brand-img"
               alt="..."
             />
@@ -64,12 +65,12 @@ function Navbar() {
                     <div className="col-12 col-lg-6">
                       <div
                         className="dropdown-img-start"
-                        style={{backgroundImage: `url(require("./assets/img/photos/photo-3.jpg"))`}}
+                        style={{
+                          backgroundImage: `url(require("./assets/img/photos/photo-3.jpg"))`,
+                        }}
                       >
                         {/* Heading */}
-                        <h4 className="fw-bold text-white mb-0">
-                          Overview
-                        </h4>
+                        <h4 className="fw-bold text-white mb-0">Overview</h4>
 
                         {/* Text */}
                         <p className="fs-sm text-white">
@@ -94,23 +95,21 @@ function Navbar() {
 
                             {/* List */}
                             <a className="dropdown-item" href="#">
-                            Residential
+                              Residential
                             </a>
                             <a className="dropdown-item" href="./rental.html">
-                            Industrial
+                              Industrial
                             </a>
                             <a className="dropdown-item mb-5" href="./job.html">
-                            Commercial
+                              Commercial
                             </a>
                             <a className="dropdown-item" href="./rental.html">
-                            Heavy Civil
+                              Heavy Civil
                             </a>
                             <a className="dropdown-item" href="./rental.html">
-                            Marine
+                              Marine
                             </a>
-
                           </div>
-                          
                         </div>{" "}
                         {/* / .row */}
                       </div>
