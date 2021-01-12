@@ -1,4 +1,5 @@
 import React from "react";
+import ConstructionImage from "../img/construction2.jpg";
 // import "../css/theme.css"
 // import "../css/libs.css"
 
@@ -10,7 +11,11 @@ function Welcome() {
         data-jarallax
         data-speed=".8"
         className="pt-12 pb-10 pt-md-15 pb-md-14"
-        style={{ backgroundImage: `url(require("assets/img/covers/cover-3.jpg"))`}}
+        style={{
+          backgroundImage: `url(${ConstructionImage})`,
+          maxWidth: "100%",
+          backgroundSize: "cover",
+        }}
       >
         <div className="container">
           <div className="row align-items-center">
@@ -20,7 +25,7 @@ function Welcome() {
                 className="display-3 fw-bold text-white"
                 id="welcomeHeadingSource"
               >
-                Remote positions for <br />
+                Find solutions for everything <br />
                 <span
                   className="text-warning"
                   data-typed='{"strings": ["UX Designers", "Ruby Developers", "Data Analysts", "Copywriters"]}'
@@ -29,8 +34,7 @@ function Welcome() {
 
               {/* Text */}
               <p className="fs-lg text-white-80 mb-6">
-                We help place the world's top tech talent at the some of the
-                greatest companies in the world.
+                We help solve complex problems by listing them on this platform
               </p>
 
               {/* Form */}
@@ -42,8 +46,8 @@ function Welcome() {
                   <input
                     className="form-control ps-2 border-start-0"
                     type="search"
-                    placeholder="Search for a job"
-                    aria-label="Search for a job"
+                    placeholder="Search for a company or problem"
+                    aria-label="Search for a company or problem"
                     aria-describedby="searchAddon"
                   ></input>
                 </div>

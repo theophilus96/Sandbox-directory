@@ -16981,27 +16981,18 @@ html {
   font-family: HKGroteskPro;
   font-weight: 400;
   src: url(../fonts/HK%20Grotesk%20Pro/HKGroteskPro-Regular.woff2)
-      format("woff2"),
-    url(../fonts/HK%20Grotesk%20Pro/HKGroteskPro-Regular.woff) format("woff");
+      format("woff2");
 }
 @font-face {
   font-family: HKGroteskPro;
   font-weight: 600;
   src: url(../fonts/HK%20Grotesk%20Pro/HKGroteskPro-Medium.woff2)
-      format("woff2"),
-    url(../fonts/HK%20Grotesk%20Pro/HKGroteskPro-Medium.woff) format("woff");
-}
-@font-face {
-  font-family: HKGroteskPro;
-  font-weight: 700;
-  src: url(../fonts/HK%20Grotesk%20Pro/HKGroteskPro-Bold.woff2) format("woff2"),
-    url(../fonts/HK%20Grotesk%20Pro/HKGroteskPro-Bold.woff) format("woff");
+      format("woff2");
+
 }
 @font-face {
   font-family: Feather;
-  src: url(../fonts/Feather/Feather.ttf?sdxovp) format("truetype"),
-    url(../fonts/Feather/Feather.woff?sdxovp) format("woff"),
-    url(../fonts/Feather/Feather.svg?sdxovp#Feather) format("svg");
+  src: url(../fonts/Feather/Feather.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -18454,9 +18445,9 @@ a.card:hover {
   position: absolute;
   width: 0;
   height: 0;
-  background-image: url(../img/masks/avatar-status.svg),
+  /* background-image: url(../img/masks/avatar-status.svg),
     url(../img/masks/avatar-group.svg), url(../img/masks/avatar-group-hover.svg),
-    url(../img/masks/avatar-group-hover-last.svg);
+    url(../img/masks/avatar-group-hover-last.svg); */
 }
 .avatar-img {
   width: 100%;
@@ -18485,8 +18476,8 @@ a.card:hover {
 }
 .avatar-offline .avatar-img,
 .avatar-online .avatar-img {
-  -webkit-mask-image: url(../img/masks/avatar-status.svg);
-  mask-image: url(../img/masks/avatar-status.svg);
+  /* -webkit-mask-image: url(../img/masks/avatar-status.svg);
+  mask-image: url(../img/masks/avatar-status.svg); */
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
@@ -18571,8 +18562,8 @@ a.card:hover {
   margin-left: -1.25rem;
 }
 .avatar-group .avatar:not(:last-child) {
-  -webkit-mask-image: url(../img/masks/avatar-group.svg);
-  mask-image: url(../img/masks/avatar-group.svg);
+  /* -webkit-mask-image: url(../img/masks/avatar-group.svg);
+  mask-image: url(../img/masks/avatar-group.svg); */
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
@@ -18582,15 +18573,12 @@ a.card:hover {
   z-index: 1;
 }
 .avatar-group .avatar:hover + .avatar {
-  -webkit-mask-image: url(../img/masks/avatar-group-hover.svg);
-  mask-image: url(../img/masks/avatar-group-hover.svg);
+  /* -webkit-mask-image: url(../img/masks/avatar-group-hover.svg);
+  mask-image: url(../img/masks/avatar-group-hover.svg); */
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
-.avatar-group .avatar:hover + .avatar:last-child {
-  -webkit-mask-image: url(../img/masks/avatar-group-hover-last.svg);
-  mask-image: url(../img/masks/avatar-group-hover-last.svg);
-}
+
 .collapse-chevron {
   display: inline-block;
   transition: all 0.2s ease-in-out;
