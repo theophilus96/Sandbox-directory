@@ -4,61 +4,61 @@ function About() {
   return (
     <div>
       {/* ABOUT */}
-      <section class="py-8 py-md-11 bg-light">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12 col-md-5 col-lg-6 order-md-2">
+      <section className="py-8 py-md-11 bg-light">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-12 col-md-5 col-lg-6 order-md-2">
               {/* iPhone + Macbook */}
-              <div class="w-md-150 w-lg-130 mb-6 mb-md-0">
-                <div class="device-combo device-combo-iphonex-macbook">
+              <div className="w-md-150 w-lg-130 mb-6 mb-md-0">
+                <div className="device-combo device-combo-iphonex-macbook">
                   {/* iPhone */}
-                  <div class="device device-iphonex">
+                  <div className="device device-iphonex">
                     <img
                       src="assets/img/screenshots/mobile/jobs.jpg"
-                      class="device-screen"
+                      className="device-screen"
                       alt="..."
                     />
                     <img
                       src="assets/img/devices/iphonex.svg"
-                      class="img-fluid"
+                      className="img-fluid"
                       alt="..."
                     />
                   </div>
 
                   {/* Macbook */}
-                  <div class="device device-macbook">
+                  <div className="device device-macbook">
                     <img
                       src="assets/img/screenshots/desktop/jobs.jpg"
-                      class="device-screen"
+                      className="device-screen"
                       alt="..."
                     />
                     <img
                       src="assets/img/devices/macbook.svg"
-                      class="img-fluid"
+                      className="img-fluid"
                       alt="..."
                     />
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-7 col-lg-6 order-md-1">
+            <div className="col-12 col-md-7 col-lg-6 order-md-1">
               {/* Heading */}
               <h2>
                 Keep your job applications <br />
-                <span class="text-primary">organized and up to date</span>.
+                <span className="text-primary">organized and up to date</span>.
               </h2>
 
               {/* Text */}
-              <p class="fs-lg text-muted mb-6">
+              <p className="fs-lg text-muted mb-6">
                 Landkit centralizes all your job applications, resumes, and
                 work, whether they're from our platform or through another site
                 or service.
               </p>
 
               {/* List */}
-              <div class="d-flex">
+              <div className="d-flex">
                 {/* Icon */}
-                <div class="icon text-primary">
+                <div className="icon text-primary">
                   <svg
                     width="24"
                     height="24"
@@ -98,20 +98,20 @@ function About() {
                   </svg>{" "}
                 </div>
 
-                <div class="ms-5">
+                <div className="ms-5">
                   {/* Heading */}
-                  <h4 class="mb-1">Magic Resume</h4>
+                  <h4 className="mb-1">Magic Resume</h4>
 
                   {/* Text */}
-                  <p class="text-muted mb-5">
+                  <p className="text-muted mb-5">
                     Magic Resume will adapt based on what positions the employer
                     has available when it's shared.
                   </p>
                 </div>
               </div>
-              <div class="d-flex">
+              <div className="d-flex">
                 {/* Icon */}
-                <div class="icon text-primary">
+                <div className="icon text-primary">
                   <svg
                     width="24"
                     height="24"
@@ -134,12 +134,12 @@ function About() {
                   </svg>{" "}
                 </div>
 
-                <div class="ms-5">
+                <div className="ms-5">
                   {/* Heading */}
-                  <h4 class="mb-1">Employer Insights</h4>
+                  <h4 className="mb-1">Employer Insights</h4>
 
                   {/* Text */}
-                  <p class="text-muted mb-0">
+                  <p className="text-muted mb-0">
                     Learn about who's looking at your profile and what
                     experience they're most interested in.
                   </p>

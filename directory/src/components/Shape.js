@@ -4,8 +4,8 @@ function Shape() {
   return (
     <div>
       {/* SHAPE  */}
-      <div class="position-relative">
-        <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+      <div className="position-relative">
+        <div className="shape shape-bottom shape-fluid-x svg-shim text-light">
           <svg
             viewBox="0 0 2880 56"
             fill="none"

@@ -7,11 +7,11 @@ function BottomImage() {
       <section
         data-jarallax
         data-speed=".8"
-        class="py-14 py-lg-16 jarallax"
+        className="py-14 py-lg-16 jarallax"
         style="background-image: url(assets/img/covers/cover-7.jpg);"
       >
         {/* Shape */}
-        <div class="shape shape-top shape-fluid-x svg-shim text-white">
+        <div className="shape shape-top shape-fluid-x svg-shim text-white">
           <svg
             viewBox="0 0 2880 250"
             fill="none"
@@ -22,7 +22,7 @@ function BottomImage() {
         </div>
 
         {/* Shape */}
-        <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+        <div className="shape shape-bottom shape-fluid-x svg-shim text-light">
           <svg
             viewBox="0 0 2880 250"
             fill="none"

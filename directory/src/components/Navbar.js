@@ -4,20 +4,20 @@ function Navbar() {
   return (
     <div>
       {/* NAVBAR */}
-      <nav class="navbar navbar-expand-lg navbar-dark navbar-togglable fixed-top">
-        <div class="container">
+      <nav className="navbar navbar-expand-lg navbar-dark navbar-togglable fixed-top">
+        <div className="container">
           {/* Brand */}
-          <a class="navbar-brand" href="./index.html">
+          <a className="navbar-brand" href="./index.html">
             <img
               src="./assets/img/brand.svg"
-              class="navbar-brand-img"
+              className="navbar-brand-img"
               alt="..."
             />
           </a>
 
           {/* Toggler */}
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarCollapse"
@@ -25,14 +25,14 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
           {/* Collapse */}
-          <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div className="collapse navbar-collapse" id="navbarCollapse">
             {/* Toggler */}
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarCollapse"
@@ -40,14 +40,14 @@ function Navbar() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <i class="fe fe-x"></i>
+              <i className="fe fe-x"></i>
             </button>
 
             {/* Navigation */}
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   id="navbarLandings"
                   data-bs-toggle="dropdown"
                   href="#"
@@ -57,55 +57,55 @@ function Navbar() {
                   Companies
                 </a>
                 <div
-                  class="dropdown-menu dropdown-menu-xl p-0"
+                  className="dropdown-menu dropdown-menu-xl p-0"
                   aria-labelledby="navbarLandings"
                 >
-                  <div class="row gx-0">
-                    <div class="col-12 col-lg-6">
+                  <div className="row gx-0">
+                    <div className="col-12 col-lg-6">
                       <div
-                        class="dropdown-img-start"
-                        style="background-image: url(./assets/img/photos/photo-3.jpg);"
+                        className="dropdown-img-start"
+                        style={{backgroundImage: `url(require("./assets/img/photos/photo-3.jpg"))`}}
                       >
                         {/* Heading */}
-                        <h4 class="fw-bold text-white mb-0">
+                        <h4 className="fw-bold text-white mb-0">
                           Overview
                         </h4>
 
                         {/* Text */}
-                        <p class="fs-sm text-white">
+                        <p className="fs-sm text-white">
                           See all the pages at once.
                         </p>
 
                         {/* Button */}
                         <a
                           href="./overview.html"
-                          class="btn btn-sm btn-white shadow-dark fonFt-size-sm"
+                          className="btn btn-sm btn-white shadow-dark fonFt-size-sm"
                         >
                           View all pages
                         </a>
                       </div>
                     </div>
-                    <div class="col-6 col-lg-6">
-                      <div class="dropdown-body">
-                        <div class="row gx-0">
-                          <div class="col-6">
+                    <div className="col-6 col-lg-6">
+                      <div className="dropdown-body">
+                        <div className="row gx-0">
+                          <div className="col-6">
                             {/* Heading */}
-                            <h6 class="dropdown-header">Types</h6>
+                            <h6 className="dropdown-header">Types</h6>
 
                             {/* List */}
-                            <a class="dropdown-item" href="#">
+                            <a className="dropdown-item" href="#">
                             Residential
                             </a>
-                            <a class="dropdown-item" href="./rental.html">
+                            <a className="dropdown-item" href="./rental.html">
                             Industrial
                             </a>
-                            <a class="dropdown-item mb-5" href="./job.html">
+                            <a className="dropdown-item mb-5" href="./job.html">
                             Commercial
                             </a>
-                            <a class="dropdown-item" href="./rental.html">
+                            <a className="dropdown-item" href="./rental.html">
                             Heavy Civil
                             </a>
-                            <a class="dropdown-item" href="./rental.html">
+                            <a className="dropdown-item" href="./rental.html">
                             Marine
                             </a>
 
@@ -119,9 +119,9 @@ function Navbar() {
                   {/* / .row */}
                 </div>
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   id="navbarPages"
                   data-bs-toggle="dropdown"
                   href="#"
@@ -132,9 +132,9 @@ function Navbar() {
                 </a>
                 {/* / .row */}
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   id="navbarAccount"
                   data-bs-toggle="dropdown"
                   href="#"
@@ -144,9 +144,9 @@ function Navbar() {
                   Blog
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   id="navbarDocumentation"
                   data-bs-toggle="dropdown"
                   href="#"
@@ -156,13 +156,13 @@ function Navbar() {
                   Contacts
                 </a>
                 <div
-                  class="dropdown-menu dropdown-menu-md"
+                  className="dropdown-menu dropdown-menu-md"
                   aria-labelledby="navbarDocumentation"
                 >
-                  <div class="list-group list-group-flush">
-                    <a class="list-group-item" href="./docs/index.html">
+                  <div className="list-group list-group-flush">
+                    <a className="list-group-item" href="./docs/index.html">
                       {/* Icon */}
-                      <div class="icon icon-sm text-primary">
+                      <div className="icon icon-sm text-primary">
                         <svg
                           width="24"
                           height="24"
@@ -203,21 +203,21 @@ function Navbar() {
                       </div>
 
                       {/* Content */}
-                      <div class="ms-4">
+                      <div className="ms-4">
                         {/* Heading */}
-                        <h6 class="fw-bold text-uppercase text-primary mb-0">
+                        <h6 className="fw-bold text-uppercase text-primary mb-0">
                           Documentation
                         </h6>
 
                         {/* Text */}
-                        <p class="fs-sm text-gray-700 mb-0">
+                        <p className="fs-sm text-gray-700 mb-0">
                           Customizing and building
                         </p>
                       </div>
                     </a>
-                    <a class="list-group-item" href="./docs/alerts.html">
+                    <a className="list-group-item" href="./docs/alerts.html">
                       {/* Icon */}
-                      <div class="icon icon-sm text-primary">
+                      <div className="icon icon-sm text-primary">
                         <svg
                           width="24"
                           height="24"
@@ -244,21 +244,21 @@ function Navbar() {
                       </div>
 
                       {/* Content */}
-                      <div class="ms-4">
+                      <div className="ms-4">
                         {/* Heading */}
-                        <h6 class="fw-bold text-uppercase text-primary mb-0">
+                        <h6 className="fw-bold text-uppercase text-primary mb-0">
                           Components
                         </h6>
 
                         {/* Text */}
-                        <p class="fs-sm text-gray-700 mb-0">
+                        <p className="fs-sm text-gray-700 mb-0">
                           Full list of components
                         </p>
                       </div>
                     </a>
-                    <a class="list-group-item" href="./docs/changelog.html">
+                    <a className="list-group-item" href="./docs/changelog.html">
                       {/* Icon */}
-                      <div class="icon icon-sm text-primary">
+                      <div className="icon icon-sm text-primary">
                         <svg
                           width="24"
                           height="24"
@@ -293,20 +293,20 @@ function Navbar() {
                       </div>
 
                       {/* Content */}
-                      <div class="ms-4">
+                      <div className="ms-4">
                         {/* Heading */}
-                        <h6 class="fw-bold text-uppercase text-primary mb-0">
+                        <h6 className="fw-bold text-uppercase text-primary mb-0">
                           Changelog
                         </h6>
 
                         {/* Text */}
-                        <p class="fs-sm text-gray-700 mb-0">
+                        <p className="fs-sm text-gray-700 mb-0">
                           Keep track of changes
                         </p>
                       </div>
 
                       {/* Badge */}
-                      <span class="badge rounded-pill bg-primary-soft ms-auto">
+                      <span className="badge rounded-pill bg-primary-soft ms-auto">
                         2.0.0-beta1
                       </span>
                     </a>
@@ -317,7 +317,7 @@ function Navbar() {
 
             {/* Button */}
             <a
-              class="navbar-btn btn btn-sm btn-primary lift ms-auto"
+              className="navbar-btn btn btn-sm btn-primary lift ms-auto"
               href="https://themes.getbootstrap.com/product/landkit/"
               target="_blank"
             >

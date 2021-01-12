@@ -4,12 +4,12 @@ function Process() {
   return (
     <div>
       {/* PROCESS */}
-      <section class="pt-8 pt-md-11">
-        <div class="container">
-          <div class="row align-items-center justify-content-between">
-            <div class="col-12 col-md-6">
+      <section className="pt-8 pt-md-11">
+        <div className="container">
+          <div className="row align-items-center justify-content-between">
+            <div className="col-12 col-md-6">
               {/* Preheading */}
-              <h6 class="text-uppercase text-primary fw-bold">Process</h6>
+              <h6 className="text-uppercase text-primary fw-bold">Process</h6>
 
               {/* Heading */}
               <h2>
@@ -18,47 +18,47 @@ function Process() {
               </h2>
 
               {/* Text */}
-              <p class="lead text-muted mb-6 mb-md-0">
+              <p className="lead text-muted mb-6 mb-md-0">
                 We keep everything as simple as possible by standardizing the
                 application process for all jobs.
               </p>
             </div>
-            <div class="col-12 col-md-6 col-xl-5">
-              <div class="row gx-0">
-                <div class="col-4">
+            <div className="col-12 col-md-6 col-xl-5">
+              <div className="row gx-0">
+                <div className="col-4">
                   {/* Image */}
                   <div
-                    class="w-150 mt-9 p-1 bg-white shadow-lg"
+                    className="w-150 mt-9 p-1 bg-white shadow-lg"
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
                     <img
                       src="assets/img/photos/photo-13.jpg"
-                      class="img-fluid"
+                      className="img-fluid"
                       alt="..."
                     />
                   </div>
                 </div>
-                <div class="col-4">
+                <div className="col-4">
                   {/* Image */}
-                  <div class="w-150 p-1 bg-white shadow-lg" data-aos="fade-up">
+                  <div className="w-150 p-1 bg-white shadow-lg" data-aos="fade-up">
                     <img
                       src="assets/img/photos/photo-14.jpg"
-                      class="img-fluid"
+                      className="img-fluid"
                       alt="..."
                     />
                   </div>
                 </div>
-                <div class="col-4 position-relative">
+                <div className="col-4 position-relative">
                   {/* Image */}
                   <div
-                    class="w-150 mt-11 float-end p-1 bg-white shadow-lg"
+                    className="w-150 mt-11 float-end p-1 bg-white shadow-lg"
                     data-aos="fade-up"
                     data-aos-delay="150"
                   >
                     <img
                       src="assets/img/photos/photo-15.jpg"
-                      class="img-fluid"
+                      className="img-fluid"
                       alt="..."
                     />
                   </div>
