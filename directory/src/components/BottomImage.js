@@ -1,5 +1,5 @@
 import React from "react";
-import ConstructionImage6 from "../img/construction6.jpg";
+import ConstructionImage7 from "../img/construction7.jpg";
 
 function BottomImage() {
   return (
@@ -7,9 +7,9 @@ function BottomImage() {
       data-jarallax=""
       data-speed=".8"
       class="py-14 py-lg-16 jarallax"
-      style={{ backgroundImage: `url(${ConstructionImage6})`, position: "relative", zIndex: 0 }}
+      style={{ backgroundImage: `url(${ConstructionImage7})`, position: "relative", zIndex: 0 }}
       data-jarallax-original-styles={{
-        backgroundImage: `url(${ConstructionImage6})`,
+        backgroundImage: `url(${ConstructionImage7})`,
         maxWidth: "100%",
         backgroundSize: "cover",
       }}

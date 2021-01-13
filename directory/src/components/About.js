@@ -1,4 +1,7 @@
 import React from "react";
+import IphoneDevice from "../devices/iphonex.svg"
+import MacDevice from "../devices/macbook.svg"
+
 
 function About() {
   return (
@@ -19,7 +22,7 @@ function About() {
                       alt="..."
                     />
                     <img
-                      src="assets/img/devices/iphonex.svg"
+                      src={IphoneDevice}
                       className="img-fluid"
                       alt="..."
                     />
@@ -33,7 +36,7 @@ function About() {
                       alt="..."
                     />
                     <img
-                      src="assets/img/devices/macbook.svg"
+                      src={MacDevice}
                       className="img-fluid"
                       alt="..."
                     />

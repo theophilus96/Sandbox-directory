@@ -52,8 +52,8 @@ function Navbar() {
                   id="navbarLandings"
                   data-bs-toggle="dropdown"
                   href="#"
-                  aria-haspopup="true"
-                  aria-expanded="false"
+                  aria-haspopup = "true"
+                  aria-expanded = "false"
                 >
                   Companies
                 </a>

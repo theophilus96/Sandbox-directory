@@ -9,11 +9,11 @@ function Apply() {
           <div className="row align-items-center">
             <div className="col-12 col-md">
               {/* Heading */}
-              <h3 className="mb-1">Apply in 15 minutes</h3>
+              <h3 className="mb-1">Apply under a minute</h3>
 
               {/* Text */}
               <p className="fs-lg text-muted mb-6 mb-md-0">
-                Get your dream job without the hassle.
+                Solving your construction problems
               </p>
             </div>
             <div className="col-12 col-md-auto">

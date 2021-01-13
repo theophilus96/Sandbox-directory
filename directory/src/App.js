@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 //pages
 import Home from "./pages/Home";
+import Company from "./pages/Company";
 
 function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/company" component={Company} />
         </Switch>
       </Router>
     </div>
