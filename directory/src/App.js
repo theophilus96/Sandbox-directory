@@ -10,6 +10,8 @@ import Navbar from "./components/Navbar";
 //pages
 import Home from "./pages/Home";
 import Company from "./pages/Company";
+import TempCompanyGrid from "./components/TempCompanyGrid";
+import HSL from "./pages/HSL";
 
 function App() {
   useEffect(() => {
@@ -24,6 +26,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/company" component={Company} />
+          <Route path="/company/hsl" component={HSL}>
+          </Route>
         </Switch>
       </Router>
     </div>

@@ -9,7 +9,6 @@ function Company() {
     <div>
       <CompanyHeader />
       <CompanyGrid />
-      <CompanyShape />
       <Footer />
     </div>
   );

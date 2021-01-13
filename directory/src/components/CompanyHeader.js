@@ -9,16 +9,15 @@ function CompanyHeader() {
           <div className="row justify-content-center">
             <div className="col-12 col-md-10 col-lg-8 text-center">
               {/* Headin */}
-              <h1 className="display-1 fw-bold">Our Work.</h1>
+              <h1 className="display-1 fw-bold">Our Companies.</h1>
 
               {/* Text */}
               <p className="lead text-secondary mb-4">
-                We design &amp; build products, tools, apps, and sites for
-                companies trying to do great things for our planet.
+                Find a new company to network with. Grow your projects together.
               </p>
 
               {/* Badges */}
-              <nav className="nav justify-content-center">
+              {/* <nav className="nav justify-content-center">
                 <a
                   className="badge rounded-pill bg-secondary-soft active me-1 mb-1"
                   href="asd.html"
@@ -55,11 +54,11 @@ function CompanyHeader() {
                 >
                   <span className="h6 text-uppercase">Resources</span>
                 </a>
-              </nav>
+              </nav> */}
             </div>
             <br />
             <div className="container">
-              <div className="pt-8 pt-md-8 pb-12 pb-md-12 row align-items-center">
+              <div className="pt-8 pt-md-8 pb-2 pb-md-2 row align-items-center">
                 <CompanySearch />
               </div>
             </div>

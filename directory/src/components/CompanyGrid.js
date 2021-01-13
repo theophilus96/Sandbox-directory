@@ -1,6 +1,32 @@
 import React from "react";
+import HSLlogo from "../icons/HSLlogo.png";
+import MBSlogo from "../img/MBSLogo.jpg";
+import CraneLogo from "../img/CraneLogo.jpg";
+import { Switch, Link, Route, useRouteMatch } from "react-router-dom";
 
-function CompanyGrid() {
+function CompanyGrid({ match }) {
+  console.log(match)
+  const CompanyData = [
+    {
+      id: 1,
+      name: "HSL Construction",
+      description: "Marine Engineering/Construction",
+      picture: { HSLlogo },
+    },
+    {
+      id: 2,
+      name: "Theo Construction",
+      description: "Residential Construction",
+      picture: { MBSlogo },
+    },
+    {
+      id: 3,
+      name: "John Engineering",
+      description: "Civil Engineering",
+      picture: { CraneLogo },
+    },
+  ];
+
   return (
     <div>
       <section className="py-8 py-md-11 mt-n10 mt-md-n14">
@@ -9,32 +35,37 @@ function CompanyGrid() {
             className="row"
             id="portfolio"
             data-isotope='{"layoutMode": "fitRows"}'
-            style={{ position: "relative" }}
+            style={{ position: "relative", height: "500px" }}
           >
             <div
               className="col-12 col-md-4 product"
               style={{ position: "absolute", left: "0px", top: "0px" }}
             >
               {/* Card */}
-              <a className="card card-flush mb-7" href="#!">
+              <Link to={`./company/hsl`} className="card card-flush mb-7" >
+          
+                
                 {/* Image */}
                 <div className="card-zoom">
                   <img
                     className="card-img-top rounded shadow-light-lg"
-                    src="assets/img/portfolio/portfolio-1.jpg"
+                    src={HSLlogo}
                     alt="..."
+                    style={{ imageSize: "contain" }}
                   />
                 </div>
 
                 {/* Footer */}
                 <div className="card-footer">
                   {/* Preheading */}
-                  <h6 className="text-uppercase mb-1 text-muted">Branding</h6>
+                  <h6 className="text-uppercase mb-1 text-muted">
+                    Marine Engineering/Construction
+                  </h6>
 
                   {/* Heading */}
-                  <h4 className="mb-0">Curology Campaign</h4>
+                  <h4 className="mb-0">HSL Constuction</h4>
                 </div>
-              </a>
+              </Link>
             </div>
             <div
               className="col-12 col-md-4 resources"
@@ -46,7 +77,7 @@ function CompanyGrid() {
                 <div className="card-zoom">
                   <img
                     className="card-img-top rounded shadow-light-lg"
-                    src="assets/img/portfolio/portfolio-2.jpg"
+                    src={MBSlogo}
                     alt="..."
                   />
                 </div>
@@ -54,10 +85,12 @@ function CompanyGrid() {
                 {/* Footer */}
                 <div className="card-footer">
                   {/* Preheading */}
-                  <h6 className="text-uppercase mb-1 text-muted">Packaging</h6>
+                  <h6 className="text-uppercase mb-1 text-muted">
+                    Residential Constuction
+                  </h6>
 
                   {/* Heading */}
-                  <h4 className="mb-0">Honest Packaging</h4>
+                  <h4 className="mb-0">Theo Constuction</h4>
                 </div>
               </a>
             </div>
@@ -71,7 +104,7 @@ function CompanyGrid() {
                 <div className="card-zoom">
                   <img
                     className="card-img-top rounded shadow-light-lg"
-                    src="assets/img/portfolio/portfolio-3.jpg"
+                    src={CraneLogo}
                     alt="..."
                   />
                 </div>
@@ -79,10 +112,12 @@ function CompanyGrid() {
                 {/* Footer */}
                 <div className="card-footer">
                   {/* Preheading */}
-                  <h6 className="text-uppercase mb-1 text-muted">Branding</h6>
+                  <h6 className="text-uppercase mb-1 text-muted">
+                    Civil Engineering
+                  </h6>
 
                   {/* Heading */}
-                  <h4 className="mb-0">Larq Bright Campaign</h4>
+                  <h4 className="mb-0">John Engineering</h4>
                 </div>
               </a>
             </div>
@@ -221,6 +256,7 @@ function CompanyGrid() {
         </div>
       </section>
     </div>
+    
   );
 }
 

@@ -21,7 +21,7 @@ function Footer() {
               />
 
               {/* Text */}
-              <p className="text-gray-700 mb-2">A better way to build.</p>
+              <p className="text-gray-700 mb-2">Building a new world.</p>
 
               {/* Social */}
               <ul className="list-unstyled list-inline list-social mb-6 mb-md-0">
@@ -65,127 +65,75 @@ function Footer() {
             </div>
             <div className="col-6 col-md-4 col-lg-2">
               {/* Heading */}
-              <h6 className="fw-bold text-uppercase text-gray-700">Products</h6>
+              <h6 className="fw-bold text-uppercase text-gray-700">Companies</h6>
 
               {/* List */}
               <ul className="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
                 <li className="mb-3">
                   <a href="#!" className="text-reset">
-                    Page Builder
+                    Residential
                   </a>
                 </li>
                 <li className="mb-3">
                   <a href="#!" className="text-reset">
-                    UI Kit
+                    Industrial
                   </a>
                 </li>
                 <li className="mb-3">
                   <a href="#!" className="text-reset">
-                    Styleguide
+                    Commercial
                   </a>
                 </li>
                 <li className="mb-3">
                   <a href="#!" className="text-reset">
-                    Documentation
+                    Heavy Civil
                   </a>
                 </li>
                 <li>
                   <a href="#!" className="text-reset">
-                    Changelog
+                    Marine
                   </a>
                 </li>
               </ul>
             </div>
             <div className="col-6 col-md-4 col-lg-2">
               {/* Heading */}
-              <h6 className="fw-bold text-uppercase text-gray-700">Services</h6>
+              <h6 className="fw-bold text-uppercase text-gray-700">Social</h6>
 
               {/* List */}
               <ul className="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
                 <li className="mb-3">
                   <a href="#!" className="text-reset">
-                    Documentation
+                    Sandbox-social
                   </a>
                 </li>
-                <li className="mb-3">
-                  <a href="#!" className="text-reset">
-                    Changelog
-                  </a>
-                </li>
-                <li className="mb-3">
-                  <a href="#!" className="text-reset">
-                    Pagebuilder
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" className="text-reset">
-                    UI Kit
-                  </a>
-                </li>
+               
               </ul>
             </div>
             <div className="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
               {/* Heading */}
-              <h6 className="fw-bold text-uppercase text-gray-700">Connect</h6>
+              <h6 className="fw-bold text-uppercase text-gray-700">Blog</h6>
 
               {/* List */}
               <ul className="list-unstyled text-muted mb-0">
                 <li className="mb-3">
                   <a href="#!" className="text-reset">
-                    Page Builder
+                    Articles
                   </a>
                 </li>
-                <li className="mb-3">
-                  <a href="#!" className="text-reset">
-                    UI Kit
-                  </a>
-                </li>
-                <li className="mb-3">
-                  <a href="#!" className="text-reset">
-                    Styleguide
-                  </a>
-                </li>
-                <li className="mb-3">
-                  <a href="#!" className="text-reset">
-                    Documentation
-                  </a>
-                </li>
-                <li className="mb-3">
-                  <a href="#!" className="text-reset">
-                    Changelog
-                  </a>
-                </li>
-                <li className="mb-3">
-                  <a href="#!" className="text-reset">
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" className="text-reset">
-                    Changelog
-                  </a>
-                </li>
+               
+                
               </ul>
             </div>
             <div className="col-6 col-md-4 col-lg-2">
               {/* Heading */}
-              <h6 className="fw-bold text-uppercase text-gray-700">Legal</h6>
+              <h6 className="fw-bold text-uppercase text-gray-700">Ecommerce</h6>
 
               {/* List */}
               <ul className="list-unstyled text-muted mb-0">
                 <li className="mb-3">
                   <a href="#!" className="text-reset">
-                    Documentation
-                  </a>
-                </li>
-                <li className="mb-3">
-                  <a href="#!" className="text-reset">
-                    Changelog
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" className="text-reset">
-                    Pagebuilder
+                    Sandbox-Ecommerce
                   </a>
                 </li>
               </ul>
