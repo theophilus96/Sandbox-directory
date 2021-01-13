@@ -1,4 +1,5 @@
 import React from "react";
+import ConstructionIllustration from "../illustration/illustration1.jpg";
 
 function RequestPost() {
   return (
@@ -9,21 +10,23 @@ function RequestPost() {
           <div className="row align-items-center">
             <div className="col-12 col-md-6">
               {/* Preheading */}
-              <h6 className="text-uppercase text-primary fw-bold">Latest posts</h6>
+              <h6 className="text-uppercase text-primary fw-bold">
+                Latest posts
+              </h6>
 
               {/* Heading */}
-              <h2>Check out some recent postings.</h2>
+              <h2>Check out some recent problems posted.</h2>
 
               {/* Text */}
               <p className="text-muted mb-6 mb-md-8">
-                We get thousands of job postings weekly, but only accept the
-                openings at the top companies.
+                We get thousands of request weekly, maybe you could help solve
+                some.
               </p>
             </div>
             <div className="col-12 col-md-6">
               {/* Image */}
               <img
-                src="assets/img/illustrations/illustration-3.png"
+                src={ConstructionIllustration}
                 className="img-fluid"
                 alt="..."
               />
@@ -55,27 +58,27 @@ function RequestPost() {
                         className="list-group-item text-reset text-decoration-none"
                         href="#!"
                       >
-                        <p className="fw-bold mb-1">Senior Visual Designer</p>
+                        <p className="fw-bold mb-1">School Building Design</p>
                         <p className="fs-sm text-muted mb-0">
-                          5+ years experience · San Francisco
+                          Theo Construction · San Francisco
                         </p>
                       </a>
                       <a
                         className="list-group-item text-reset text-decoration-none"
                         href="#!"
                       >
-                        <p className="fw-bold mb-1">Motion Graphics Designer</p>
+                        <p className="fw-bold mb-1">New Crane Design</p>
                         <p className="fs-sm text-muted mb-0">
-                          2+ years experience · Paris
+                          John Machine Engineering · Paris
                         </p>
                       </a>
                       <a
                         className="list-group-item text-reset text-decoration-none"
                         href="#!"
                       >
-                        <p className="fw-bold mb-1">Product Designer</p>
+                        <p className="fw-bold mb-1">Jetty Design</p>
                         <p className="fs-sm text-muted mb-0">
-                          4+ years experience · Los Angeles
+                          HSL Construction · Singapore
                         </p>
                       </a>
                     </div>
@@ -96,7 +99,7 @@ function RequestPost() {
 
                   {/* Badge */}
                   <span className="badge badge-rounded-circle bg-danger-soft">
-                    <span>3</span>
+                    <span>1</span>
                   </span>
 
                   {/* List group */}
@@ -106,27 +109,9 @@ function RequestPost() {
                         className="list-group-item text-reset text-decoration-none"
                         href="#!"
                       >
-                        <p className="fw-bold mb-1">Ruby Engineer</p>
+                        <p className="fw-bold mb-1">Crane Engineer</p>
                         <p className="fs-sm text-muted mb-0">
-                          4+ years experience · New York
-                        </p>
-                      </a>
-                      <a
-                        className="list-group-item text-reset text-decoration-none"
-                        href="#!"
-                      >
-                        <p className="fw-bold mb-1">Senior Reliability Developer</p>
-                        <p className="fs-sm text-muted mb-0">
-                          8+ years experience · Pasadena
-                        </p>
-                      </a>
-                      <a
-                        className="list-group-item text-reset text-decoration-none"
-                        href="#!"
-                      >
-                        <p className="fw-bold mb-1">QA Engineer</p>
-                        <p className="fs-sm text-muted mb-0">
-                          2+ years experience · Oakland
+                        John Machine Engineering · New York
                         </p>
                       </a>
                     </div>
@@ -144,12 +129,12 @@ function RequestPost() {
                 <div className="card-body">
                   {/* Heading */}
                   <h6 className="text-uppercase text-success d-inline-block mb-5 me-1">
-                    Product
+                    General
                   </h6>
 
                   {/* Badge */}
                   <span className="badge badge-rounded-circle bg-success-soft">
-                    <span>5</span>
+                    <span>2</span>
                   </span>
 
                   {/* List group */}
@@ -159,45 +144,18 @@ function RequestPost() {
                         className="list-group-item text-reset text-decoration-none"
                         href="#!"
                       >
-                        <p className="fw-bold mb-1">Project Manager</p>
+                        <p className="fw-bold mb-1">Crane Fuel Problem</p>
                         <p className="fs-sm text-muted mb-0">
-                          3+ years experience · London
+                          HSL construction· Singapore
                         </p>
                       </a>
                       <a
                         className="list-group-item text-reset text-decoration-none"
                         href="#!"
                       >
-                        <p className="fw-bold mb-1">Head of Product</p>
+                        <p className="fw-bold mb-1">Innovation of new Bricks</p>
                         <p className="fs-sm text-muted mb-0">
-                          10+ years experience · San Francisco
-                        </p>
-                      </a>
-                      <a
-                        className="list-group-item text-reset text-decoration-none"
-                        href="#!"
-                      >
-                        <p className="fw-bold mb-1">Senior Product Manager</p>
-                        <p className="fs-sm text-muted mb-0">
-                          5+ years experience · Los Angeles
-                        </p>
-                      </a>
-                      <a
-                        className="list-group-item text-reset text-decoration-none"
-                        href="#!"
-                      >
-                        <p className="fw-bold mb-1">Junior Project Manager</p>
-                        <p className="fs-sm text-muted mb-0">
-                          No experience required · Paris
-                        </p>
-                      </a>
-                      <a
-                        className="list-group-item text-reset text-decoration-none"
-                        href="#!"
-                      >
-                        <p className="fw-bold mb-1">Application Coordinator</p>
-                        <p className="fs-sm text-muted mb-0">
-                          6+ years experience · Seattle
+                          Israel Construction · Israel
                         </p>
                       </a>
                     </div>
@@ -228,9 +186,11 @@ function RequestPost() {
                         className="list-group-item text-reset text-decoration-none"
                         href="#!"
                       >
-                        <p className="fw-bold mb-1">Customer Support Specialist</p>
+                        <p className="fw-bold mb-1">
+                          Extra manpower help needed
+                        </p>
                         <p className="fs-sm text-muted mb-0">
-                          4+ years experience · Anywhere
+                          Theo Construction · Singapore
                         </p>
                       </a>
                     </div>
@@ -247,7 +207,7 @@ function RequestPost() {
                 href="#!"
                 className="btn w-100 btn-primary d-flex align-items-center lift"
               >
-                View over 10,000 other postings{" "}
+                View over 10,000 other request{" "}
                 <i className="fe fe-arrow-right ms-auto"></i>
               </a>
             </div>

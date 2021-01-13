@@ -9,12 +9,12 @@ function Stats() {
           <div className="row">
             <div className="col-12 col-md-10 col-lg-8">
               {/* Preheading */}
-              <h6 className="text-uppercase text-primary">Placement rates</h6>
+              <h6 className="text-uppercase text-primary">Statistics</h6>
 
               {/* Heading */}
               <h2 className="mb-6 mb-md-8">
-                Landkit is the leading job placement site with the highest rate
-                of success of any tech job board.
+                Sandbox is the new way for the constuction industry to
+                communicate.
               </h2>
 
               {/* Stats */}
@@ -31,7 +31,7 @@ function Stats() {
                     </span>
                     k
                   </h3>
-                  <p className="text-gray-700 mb-0">Placements</p>
+                  <p className="text-gray-700 mb-0">Companies</p>
                 </div>
                 <div className="px-5">
                   <h3 className="mb-0">
@@ -45,7 +45,7 @@ function Stats() {
                     </span>
                     k
                   </h3>
-                  <p className="text-gray-700 mb-0">Positions</p>
+                  <p className="text-gray-700 mb-0">Requests</p>
                 </div>
                 <div className="ps-5">
                   <h3 className="mb-0">
