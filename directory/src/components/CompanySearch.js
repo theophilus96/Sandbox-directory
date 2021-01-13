@@ -14,8 +14,8 @@ function CompanySearch() {
           <input
             className="form-control border-0 px-1"
             type="text"
-            aria-label="Search our blog..."
-            placeholder="Search our blog..."
+            aria-label="Search Companies ..."
+            placeholder="Search Companies ..."
           />
 
           {/* Text */}
