@@ -8,6 +8,7 @@ import Shape from "../components/Shape";
 import Stats from "../components/Stats";
 import Steps from "../components/Steps";
 import Welcome from "../components/Welcome";
+import BottomImage from "../components/BottomImage";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <Shape />
       <RequestPost />
       <Stats />
+      <BottomImage />
       <About />
       <Apply />
       <Footer />

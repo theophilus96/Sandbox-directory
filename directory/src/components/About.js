@@ -44,15 +44,14 @@ function About() {
             <div className="col-12 col-md-7 col-lg-6 order-md-1">
               {/* Heading */}
               <h2>
-                Keep your job applications <br />
+                Keep your Company's storefront <br />
                 <span className="text-primary">organized and up to date</span>.
               </h2>
 
               {/* Text */}
               <p className="fs-lg text-muted mb-6">
-                Landkit centralizes all your job applications, resumes, and
-                work, whether they're from our platform or through another site
-                or service.
+                SandBox centralizes all your projects and current works, this
+                helps summarize what your company is all about.
               </p>
 
               {/* List */}
@@ -100,12 +99,11 @@ function About() {
 
                 <div className="ms-5">
                   {/* Heading */}
-                  <h4 className="mb-1">Magic Resume</h4>
+                  <h4 className="mb-1">Ordered information</h4>
 
                   {/* Text */}
                   <p className="text-muted mb-5">
-                    Magic Resume will adapt based on what positions the employer
-                    has available when it's shared.
+                    List only the important points of your company.
                   </p>
                 </div>
               </div>
@@ -136,12 +134,11 @@ function About() {
 
                 <div className="ms-5">
                   {/* Heading */}
-                  <h4 className="mb-1">Employer Insights</h4>
+                  <h4 className="mb-1">Projects Viewer</h4>
 
                   {/* Text */}
                   <p className="text-muted mb-0">
-                    Learn about who's looking at your profile and what
-                    experience they're most interested in.
+                    Showcase your projects to the world.
                   </p>
                 </div>
               </div>
