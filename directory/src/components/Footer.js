@@ -4,6 +4,7 @@ import TwitterLogo from "../icons/twitter.svg";
 import InstagramLogo from "../icons/instagram.svg";
 import PinterestLogo from "../icons/pinterest.svg";
 import SandBoxLogo from "../icons/SandboxLogo.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -65,7 +66,9 @@ function Footer() {
             </div>
             <div className="col-6 col-md-4 col-lg-2">
               {/* Heading */}
-              <h6 className="fw-bold text-uppercase text-gray-700">Companies</h6>
+              <h6 className="fw-bold text-uppercase text-gray-700">
+                Companies
+              </h6>
 
               {/* List */}
               <ul className="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
@@ -107,7 +110,6 @@ function Footer() {
                     Sandbox-social
                   </a>
                 </li>
-               
               </ul>
             </div>
             <div className="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
@@ -121,18 +123,21 @@ function Footer() {
                     Articles
                   </a>
                 </li>
-               
-                
               </ul>
             </div>
             <div className="col-6 col-md-4 col-lg-2">
               {/* Heading */}
-              <h6 className="fw-bold text-uppercase text-gray-700">Ecommerce</h6>
+              <h6 className="fw-bold text-uppercase text-gray-700">
+                Ecommerce
+              </h6>
 
               {/* List */}
               <ul className="list-unstyled text-muted mb-0">
                 <li className="mb-3">
-                  <a href="#!" className="text-reset">
+                  <a
+                    href="https://sandbox-d017b.web.app/"
+                    className="text-reset"
+                  >
                     Sandbox-Ecommerce
                   </a>
                 </li>

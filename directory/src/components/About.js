@@ -1,7 +1,8 @@
 import React from "react";
-import IphoneDevice from "../devices/iphonex.svg"
-import MacDevice from "../devices/macbook.svg"
-
+import IphoneDevice from "../devices/iphonex.svg";
+import MacDevice from "../devices/macbook.svg";
+import PhoneView from "../img/phoneview2.png";
+import WebView from "../img/webview.png";
 
 function About() {
   return (
@@ -17,29 +18,20 @@ function About() {
                   {/* iPhone */}
                   <div className="device device-iphonex">
                     <img
-                      src="assets/img/screenshots/mobile/jobs.jpg"
+                      src={PhoneView}
                       className="device-screen"
                       alt="..."
+                      style={{
+                        objectFit: "cover",
+                      }}
                     />
-                    <img
-                      src={IphoneDevice}
-                      className="img-fluid"
-                      alt="..."
-                    />
+                    <img src={IphoneDevice} className="img-fluid" alt="..." />
                   </div>
 
                   {/* Macbook */}
                   <div className="device device-macbook">
-                    <img
-                      src="assets/img/screenshots/desktop/jobs.jpg"
-                      className="device-screen"
-                      alt="..."
-                    />
-                    <img
-                      src={MacDevice}
-                      className="img-fluid"
-                      alt="..."
-                    />
+                    <img src={WebView} className="device-screen" alt="..." />
+                    <img src={MacDevice} className="img-fluid" alt="..." />
                   </div>
                 </div>
               </div>

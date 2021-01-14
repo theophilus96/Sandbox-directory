@@ -1,20 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SandBoxLogo from "../icons/SandboxLogo.png";
 
 function Navbar() {
   return (
     <div>
       {/* NAVBAR */}
-      <nav className="navbar navbar-expand-lg navbar-dark navbar-togglable fixed-top">
+      <nav className="navbar navbar-expand-lg navbar-primary navbar-togglable fixed-top">
         <div className="container">
           {/* Brand */}
-          <a className="navbar-brand" href="./index.html">
-            <img
-              src={SandBoxLogo}
-              className="navbar-brand-img"
-              alt="..."
-            />
-          </a>
+          <Link to="/" className="navbar-brand">
+            <img src={SandBoxLogo} className="navbar-brand-img" alt="..." />
+          </Link>
 
           {/* Toggler */}
           <button
@@ -47,16 +44,17 @@ function Navbar() {
             {/* Navigation */}
             <ul className="navbar-nav ms-auto">
               <li className="nav-item dropdown">
-                <a
+                <Link
+                  to="/company"
                   className="nav-link dropdown-toggle"
                   id="navbarLandings"
                   data-bs-toggle="dropdown"
-                  href="#"
-                  aria-haspopup = "true"
-                  aria-expanded = "false"
+                  aria-haspopup="true"
+                  aria-expanded="false"
                 >
                   Companies
-                </a>
+                </Link>
+
                 <div
                   className="dropdown-menu dropdown-menu-xl p-0"
                   aria-labelledby="navbarLandings"
@@ -317,10 +315,10 @@ function Navbar() {
             {/* Button */}
             <a
               className="navbar-btn btn btn-sm btn-primary lift ms-auto"
-              href="https://themes.getbootstrap.com/product/landkit/"
+              href="#"
               target="_blank"
             >
-              Buy now
+              Sign up
             </a>
           </div>
         </div>

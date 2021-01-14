@@ -1,4 +1,7 @@
 import React from "react";
+import MBSlogo from "../img/MBSLogo.jpg";
+import CraneLogo from "../img/CraneLogo.jpg";
+import JaneDesign2 from "../img/JaneDesign2.jpg";
 
 function RelatedWork() {
   return (
@@ -32,11 +35,7 @@ function RelatedWork() {
               <a className="card mb-6 mb-lg-0 shadow-light-lg" href="#!">
                 {/* Image */}
                 <div className="card-zoom">
-                  <img
-                    className="card-img-top"
-                    src="assets/img/portfolio/portfolio-1.jpg"
-                    alt="..."
-                  />
+                  <img className="card-img-top" src={MBSlogo} alt="..." />
                 </div>
 
                 {/* Body */}
@@ -56,10 +55,12 @@ function RelatedWork() {
                   </div>
 
                   {/* Preheading */}
-                  <h6 className="text-uppercase mb-1 text-muted">Branding</h6>
+                  <h6 className="text-uppercase mb-1 text-muted">
+                    Residential Construction
+                  </h6>
 
                   {/* Heading */}
-                  <h4 className="mb-0">Curology Campaign</h4>
+                  <h4 className="mb-0">Theo Construction</h4>
                 </div>
               </a>
             </div>
@@ -68,11 +69,7 @@ function RelatedWork() {
               <a className="card mb-6 mb-lg-0 shadow-light-lg" href="#!">
                 {/* Image */}
                 <div className="card-zoom">
-                  <img
-                    className="card-img-top"
-                    src="assets/img/portfolio/portfolio-2.jpg"
-                    alt="..."
-                  />
+                  <img className="card-img-top" src={CraneLogo} alt="..." />
                 </div>
 
                 {/* Body */}
@@ -92,10 +89,12 @@ function RelatedWork() {
                   </div>
 
                   {/* Preheading */}
-                  <h6 className="text-uppercase mb-1 text-muted">Branding</h6>
+                  <h6 className="text-uppercase mb-1 text-muted">
+                    Civil Engineering
+                  </h6>
 
                   {/* Heading */}
-                  <h4 className="mb-0">Honest Packaging</h4>
+                  <h4 className="mb-0">John Engineering</h4>
                 </div>
               </a>
             </div>
@@ -104,11 +103,7 @@ function RelatedWork() {
               <a className="card d-md-none d-lg-flex shadow-light-lg" href="#!">
                 {/* Image */}
                 <div className="card-zoom">
-                  <img
-                    className="card-img-top"
-                    src="assets/img/portfolio/portfolio-4.jpg"
-                    alt="..."
-                  />
+                  <img className="card-img-top" src={JaneDesign2} alt="..." />
                 </div>
 
                 {/* Body */}
@@ -128,10 +123,12 @@ function RelatedWork() {
                   </div>
 
                   {/* Preheading */}
-                  <h6 className="text-uppercase mb-1 text-muted">Ideation</h6>
+                  <h6 className="text-uppercase mb-1 text-muted">
+                    Architectural Design
+                  </h6>
 
                   {/* Heading */}
-                  <h4 className="mb-0">Doodle Pad</h4>
+                  <h4 className="mb-0">Jane Design Company</h4>
                 </div>
               </a>
             </div>

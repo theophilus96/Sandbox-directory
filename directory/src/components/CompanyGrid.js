@@ -42,7 +42,7 @@ function CompanyGrid({ match }) {
               style={{ position: "absolute", left: "0px", top: "0px" }}
             >
               {/* Card */}
-              <Link to={`./company/hsl`} className="card card-flush mb-7" >
+              <Link to="/company/hsl" className="card card-flush mb-7" >
           
                 
                 {/* Image */}
