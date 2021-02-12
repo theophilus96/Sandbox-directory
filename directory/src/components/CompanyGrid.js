@@ -1,11 +1,12 @@
 import React from "react";
-import HSLlogo from "../icons/HSLlogo.png";
+import HSLlogo from "../img/HSLproject2.jpg";
 import MBSlogo from "../img/MBSLogo.jpg";
 import CraneLogo from "../img/CraneLogo.jpg";
+import useFirestore from "../hooks/useFirestore";
 import { Switch, Link, Route, useRouteMatch } from "react-router-dom";
 
 function CompanyGrid({ match }) {
-  console.log(match)
+  console.log(match);
   const CompanyData = [
     {
       id: 1,
@@ -27,6 +28,9 @@ function CompanyGrid({ match }) {
     },
   ];
 
+  const { docs } = useFirestore("company");
+  console.log(docs);
+
   return (
     <div>
       <section className="py-8 py-md-11 mt-n10 mt-md-n14">
@@ -35,45 +39,42 @@ function CompanyGrid({ match }) {
             className="row"
             id="portfolio"
             data-isotope='{"layoutMode": "fitRows"}'
-            style={{ position: "relative", height: "500px" }}
           >
-            <div
-              className="col-12 col-md-4 product"
-              style={{ position: "absolute", left: "0px", top: "0px" }}
-            >
-              {/* Card */}
-              <Link to="/company/hsl" className="card card-flush mb-7" >
-          
-                
-                {/* Image */}
-                <div className="card-zoom">
-                  <img
-                    className="card-img-top rounded shadow-light-lg"
-                    src={HSLlogo}
-                    alt="..."
-                    style={{ imageSize: "contain" }}
-                  />
-                </div>
+            {docs &&
+              docs.map((doc) => (
+                <div className="col-12 col-md-4 product">
+                  {/* style={{ position: "absolute", left: "0px", top: "0px" }} */}
 
-                {/* Footer */}
-                <div className="card-footer">
-                  {/* Preheading */}
-                  <h6 className="text-uppercase mb-1 text-muted">
-                    Marine Engineering/Construction
-                  </h6>
+                  <Link to="/company/hsl" className="card card-flush mb-7">
+                    {/* Image */}
+                    <div className="card-zoom">
+                      <img
+                        className="card-img-top rounded shadow-light-lg"
+                        src={doc.image}
+                        alt="..."
+                      />
+                      {/* style={{ imageSize: "contain" }} */}
+                    </div>
 
-                  {/* Heading */}
-                  <h4 className="mb-0">HSL Constuction</h4>
+                    {/* Footer */}
+                    <div className="card-footer">
+                      {/* Preheading */}
+                      <h6 className="text-uppercase mb-1 text-muted">
+                        {doc.description}
+                      </h6>
+
+                      {/* Heading */}
+                      <h4 className="mb-0">{doc.name}</h4>
+                    </div>
+                  </Link>
                 </div>
-              </Link>
-            </div>
-            <div
+              ))}
+
+            {/* <div
               className="col-12 col-md-4 resources"
               style={{ position: "absolute", left: "346.656px", top: "0px" }}
             >
-              {/* Card */}
               <a className="card card-flush mb-7" href="#!">
-                {/* Image */}
                 <div className="card-zoom">
                   <img
                     className="card-img-top rounded shadow-light-lg"
@@ -81,26 +82,19 @@ function CompanyGrid({ match }) {
                     alt="..."
                   />
                 </div>
-
-                {/* Footer */}
                 <div className="card-footer">
-                  {/* Preheading */}
                   <h6 className="text-uppercase mb-1 text-muted">
                     Residential Constuction
                   </h6>
-
-                  {/* Heading */}
                   <h4 className="mb-0">Theo Constuction</h4>
                 </div>
               </a>
-            </div>
-            <div
+            </div> */}
+            {/* <div
               className="col-12 col-md-4 ux"
               style={{ position: "absolute", left: "693.312px", top: "0px" }}
             >
-              {/* Card */}
               <a className="card card-flush mb-7" href="#!">
-                {/* Image */}
                 <div className="card-zoom">
                   <img
                     className="card-img-top rounded shadow-light-lg"
@@ -108,19 +102,14 @@ function CompanyGrid({ match }) {
                     alt="..."
                   />
                 </div>
-
-                {/* Footer */}
                 <div className="card-footer">
-                  {/* Preheading */}
                   <h6 className="text-uppercase mb-1 text-muted">
                     Civil Engineering
                   </h6>
-
-                  {/* Heading */}
                   <h4 className="mb-0">John Engineering</h4>
                 </div>
               </a>
-            </div>
+            </div> */}
             {/* <div
               className="col-12 col-md-4 resources"
               style={{ position: "absolute", left: "0px", top: "558.641px" }}
@@ -256,7 +245,6 @@ function CompanyGrid({ match }) {
         </div>
       </section>
     </div>
-    
   );
 }
 

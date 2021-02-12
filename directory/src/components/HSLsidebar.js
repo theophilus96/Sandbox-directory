@@ -1,12 +1,13 @@
 import React from "react";
-import HSLproject1 from "../img/HSLproject1.png";
-import HSLproject2 from "../img/HSLproject2.jpg";
-import HSLproject3 from "../img/HSLproject3.jpg";
-import HSLproject4 from "../img/HSLproject4.jpg";
-import HSLproject5 from "../img/HSLproject5.jpg";
-import HSLproject6 from "../img/HSLproject6.jpg";
+import useFirestore from "../hooks/useFirestore";
 
 function HSLsidebar() {
+  const { docs } = useFirestore("company/Uz4gSdeyYAXuiWw0ijqp/project");
+  console.log(docs);
+  const company = useFirestore("company").docs;
+  console.log(company);
+  console.log(company[0]);
+
   return (
     <div className="container">
       <div className="row justify-content-between">
@@ -21,15 +22,12 @@ function HSLsidebar() {
               className="img-fluid mb-4 text-body svg-shim"
               style={{ maxWidth: "140px" }}
             >
-              <h1>HSL Constructor Pte Ltd</h1>
+              <h1>{company[0].name}</h1>
             </div>
 
             {/* Text */}
             <p className="fs-lg mb-7 text-muted">
-              HSL is a regional infrastructure construction company <br />
-              We help bring electricity and clean water to communities <br />
-              We deliver marine infrastructure
-              <br /> We also support the Oil & Petrochemical industry
+              {company[0].longDescription}
             </p>
 
             {/* List group */}
@@ -38,19 +36,19 @@ function HSLsidebar() {
                 {/* Heading */}
                 <h6 className="d-flex mb-0 text-uppercase">
                   Address
-                  <span className="ms-auto">Singapore 609162</span>
+                  <span className="ms-auto">{company[0].address}</span>
                 </h6>
               </li>
               <li className="list-group-item">
                 {/* Heading */}
                 <h6 className="d-flex mb-0 text-uppercase">
-                  Service <span className="ms-auto">Marine infrastructure</span>
+                  Service <span className="ms-auto">{company[0].description}</span>
                 </h6>
               </li>
               <li className="list-group-item">
                 {/* Heading */}
                 <h6 className="d-flex mb-0 text-uppercase">
-                  Phone <span className="ms-auto"> 6898 5225</span>
+                  Phone <span className="ms-auto">{company[0].phone}</span>
                 </h6>
               </li>
             </ul>
@@ -59,21 +57,20 @@ function HSLsidebar() {
         <div className="col-12 col-md-7">
           {/* Images */}
           <section className="pb-8 pt-md-12 pb-md-10">
-            <a className="d-block" data-bigpicture={HSLproject1} href="#">
-              <img className="img-fluid rounded" src={HSLproject1} alt="..." />
-            </a>
-            <a className="d-block mt-7" data-bigpicture={HSLproject2} href="#">
-              <img className="img-fluid rounded" src={HSLproject2} alt="..." />
-            </a>
-            <a className="d-block mt-7" data-bigpicture={HSLproject3} href="#">
-              <img className="img-fluid rounded" src={HSLproject3} alt="..." />
-            </a>
-            <a className="d-block mt-7" data-bigpicture={HSLproject4} href="#">
-              <img className="img-fluid rounded" src={HSLproject4} alt="..." />
-            </a>
-            <a className="d-block mt-7" data-bigpicture={HSLproject5} href="#">
-              <img className="img-fluid rounded" src={HSLproject5} alt="..." />
-            </a>
+            {docs &&
+              docs.map((doc) => (
+                <a
+                  className="d-block mt-7"
+                  data-bigpicture={doc.image}
+                  href="#!"
+                >
+                  <img
+                    className="img-fluid rounded"
+                    src={doc.image}
+                    alt="..."
+                  />
+                </a>
+              ))}
           </section>
         </div>
       </div>
