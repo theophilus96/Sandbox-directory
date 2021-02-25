@@ -45,7 +45,7 @@ function CompanyGrid({ match }) {
                 <div className="col-12 col-md-4 product">
                   {/* style={{ position: "absolute", left: "0px", top: "0px" }} */}
 
-                  <Link to="/company/hsl" className="card card-flush mb-7">
+                  <Link to={`/company/${doc.id}`} className="card card-flush mb-7">
                     {/* Image */}
                     <div className="card-zoom">
                       <img

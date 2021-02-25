@@ -29,7 +29,7 @@ function App() {
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/blog/:id" component={BlogPost} />
           <Route exact path="/company" component={Company} />
-          <Route path="/company/hsl" component={HSL}></Route>
+          <Route path="/company/:id" component={HSL}></Route>
         </Switch>
       </Router>
     </div>
