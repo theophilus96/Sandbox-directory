@@ -10,9 +10,10 @@ import Navbar from "./components/Navbar";
 //pages
 import Home from "./pages/Home";
 import Company from "./pages/Company";
+import Blog from "./pages/Blog";
 import TempCompanyGrid from "./components/TempCompanyGrid";
 import HSL from "./pages/HSL";
-
+import BlogPost from "./pages/BlogPost";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -25,9 +26,10 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/blog" component={Blog} />
+          <Route exact path="/blog/:id" component={BlogPost} />
           <Route exact path="/company" component={Company} />
-          <Route path="/company/hsl" component={HSL}>
-          </Route>
+          <Route path="/company/hsl" component={HSL}></Route>
         </Switch>
       </Router>
     </div>

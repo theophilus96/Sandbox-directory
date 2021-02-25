@@ -134,7 +134,7 @@ function Navbar() {
                   className="nav-link dropdown-toggle"
                   id="navbarAccount"
                   data-bs-toggle="dropdown"
-                  href="#"
+                  href="/blog"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
