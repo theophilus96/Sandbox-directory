@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../firebase/config";
+//picture
+import CraneLogo from "../img/CraneLogo.jpg";
 
 export default function Login() {
   const history = useHistory();
@@ -98,7 +100,9 @@ export default function Login() {
             {/* <!-- Image --> */}
             <div
               className="h-100 w-cover bg-cover"
-              style="background-image: url(assets/img/covers/cover-15.jpg);"
+              style={{
+                backgroundImage: `url(${CraneLogo}})`,
+              }}
             ></div>
 
             {/* <!-- Shape --> */}

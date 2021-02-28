@@ -315,10 +315,10 @@ function Navbar() {
             {/* Button */}
             <a
               className="navbar-btn btn btn-sm btn-primary lift ms-auto"
-              href="#"
+              href="/login"
               target="_blank"
             >
-              Sign up
+              Login
             </a>
           </div>
         </div>
