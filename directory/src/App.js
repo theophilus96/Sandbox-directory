@@ -18,6 +18,7 @@ import BlogPost from "./pages/BlogPost";
 //state
 import { auth } from "./firebase/config";
 import { useStateValue } from "./state/StateProvider";
+import Problem from "./pages/Problem";
 
 function App() {
   useEffect(() => {
@@ -56,6 +57,7 @@ function App() {
           <Route exact path="/company" component={Company} />
           <Route path="/company/:id" component={HSL}></Route>
           <Route exact path="/login" component={Login} />
+          <Route exact path="/listing" component={Problem} />
         </Switch>
       </Router>
     </div>

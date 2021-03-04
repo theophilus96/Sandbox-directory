@@ -1,12 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SandBoxLogo from "../icons/SandboxLogo.png";
-
+//state
+import { auth } from "../firebase/config";
+import { useStateValue } from "../state/StateProvider";
 function Navbar() {
+  const [{ user }, dispatch] = useStateValue();
+
+  const handleAuthentication = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
   return (
     <div>
       {/* NAVBAR */}
-      <nav className="navbar navbar-expand-lg navbar-primary navbar-togglable fixed-top">
+      <nav className="navbar navbar-expand-lg navbar-light navbar-togglable fixed-top bg-white border-bottom">
         <div className="container">
           {/* Brand */}
           <Link to="/" className="navbar-brand">
@@ -310,15 +319,26 @@ function Navbar() {
                   </div>
                 </div>
               </li>
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  onClick={handleAuthentication} 
+                  href={!user && "/login"}
+                >
+                  Hello {!user ? "Guest" : user.email}
+                </a>
+              </li>
             </ul>
 
             {/* Button */}
+
             <a
               className="navbar-btn btn btn-sm btn-primary lift ms-auto"
-              href="/login"
-              target="_blank"
+              href={!user && "/login"}
+              onClick={handleAuthentication}
             >
-              Login
+              {user ? "Sign Out" : "Sign In"}
             </a>
           </div>
         </div>
