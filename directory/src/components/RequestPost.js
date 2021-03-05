@@ -111,7 +111,7 @@ function RequestPost() {
                       >
                         <p className="fw-bold mb-1">Crane Engineer</p>
                         <p className="fs-sm text-muted mb-0">
-                        John Machine Engineering · New York
+                          John Machine Engineering · New York
                         </p>
                       </a>
                     </div>
