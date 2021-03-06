@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import useFirestore from "../hooks/useFirestore";
+import { projectFirestore } from "../firebase/config";
+import { useStateValue } from "../state/StateProvider";
+
 export default function Listing() {
+  const [{ user }] = useStateValue();
   const design = useFirestore("problem/tLQSvrHR9fE5fI2mv7TV/design").docs;
   const engineering = useFirestore("problem/tLQSvrHR9fE5fI2mv7TV/engineering")
     .docs;
@@ -9,9 +13,24 @@ export default function Listing() {
 
   const support = useFirestore("problem/tLQSvrHR9fE5fI2mv7TV/support").docs;
 
-  console.log(engineering);
+  const [type, setType] = useState("");
+
+  const deleteItem = (id, type) => {
+    projectFirestore
+      .collection("problem")
+      .doc("tLQSvrHR9fE5fI2mv7TV")
+      .collection(type)
+      .doc(id)
+      .delete();
+  };
+
+  useEffect(() => {
+    console.log("type = ", type); // do something after state has updated
+  }, [type]);
+
+  // console.log(engineering);
   return (
-    <section class="pt-12 pt-md-12 bt-10 py-md-14">
+    <section class="pt-12 pt-md-12 bt-2 py-md-2">
       <div class="container pb-8 pb-md-11 ">
         <div className="row align-items-center mb-5">
           <div class="col">
@@ -56,7 +75,9 @@ export default function Listing() {
                             className="text-reset text-decoration-none"
                           >
                             <p className="mb-1">{doc.title}</p>
-                            <p className="fs-sm text-muted mb-0">{doc.id}</p>
+                            <p className="fs-sm text-muted mb-0">
+                              {doc.description}
+                            </p>
                           </a>
                         </td>
                         <td>
@@ -74,6 +95,17 @@ export default function Listing() {
                           >
                             <p className="fs-sm mb-0">{doc.location}</p>
                           </a>
+                          {doc.userEmail === user.email ? (
+                            <button
+                              onClick={() => {
+                                setType("design");
+                                deleteItem(doc.id, "design");
+                              }}
+                              class="btn btn-xs btn-rounded-circle btn-danger"
+                            >
+                              <i class="fe fe-x"></i>
+                            </button>
+                          ) : null}
                         </td>
                       </tr>
                     ))}
@@ -89,12 +121,14 @@ export default function Listing() {
             <h4 className="fw-bold mb-1">Engineering</h4>
 
             <p className="fs-sm text-muted mb-0">
-            Engineering questions and problems
+              Engineering questions and problems
             </p>
           </div>
           <div className="col-auto">
             <span className="badge rounded-pill bg-danger-soft">
-              <span className="h6 text-uppercase">{engineering.length} request</span>
+              <span className="h6 text-uppercase">
+                {engineering.length} request
+              </span>
             </span>
           </div>
         </div>
@@ -127,7 +161,9 @@ export default function Listing() {
                             className="text-reset text-decoration-none"
                           >
                             <p className="mb-1">{doc.title}</p>
-                            <p className="fs-sm text-muted mb-0">{doc.id}</p>
+                            <p className="fs-sm text-muted mb-0">
+                              {doc.description}
+                            </p>
                           </a>
                         </td>
                         <td>
@@ -145,6 +181,17 @@ export default function Listing() {
                           >
                             <p className="fs-sm mb-0">{doc.location}</p>
                           </a>
+                          {doc.userEmail === user.email ? (
+                            <button
+                              onClick={() => {
+                                setType("engineering");
+                                deleteItem(doc.id, "engineering");
+                              }}
+                              class="btn btn-xs btn-rounded-circle btn-danger"
+                            >
+                              <i class="fe fe-x"></i>
+                            </button>
+                          ) : null}
                         </td>
                       </tr>
                     ))}
@@ -165,7 +212,9 @@ export default function Listing() {
           </div>
           <div className="col-auto">
             <span className="badge rounded-pill bg-success-soft">
-              <span className="h6 text-uppercase">{general.length} request</span>
+              <span className="h6 text-uppercase">
+                {general.length} request
+              </span>
             </span>
           </div>
         </div>
@@ -198,7 +247,9 @@ export default function Listing() {
                             className="text-reset text-decoration-none"
                           >
                             <p className="mb-1">{doc.title}</p>
-                            <p className="fs-sm text-muted mb-0">{doc.id}</p>
+                            <p className="fs-sm text-muted mb-0">
+                              {doc.description}
+                            </p>
                           </a>
                         </td>
                         <td>
@@ -216,6 +267,17 @@ export default function Listing() {
                           >
                             <p className="fs-sm mb-0">{doc.location}</p>
                           </a>
+                          {doc.userEmail === user.email ? (
+                            <button
+                              onClick={() => {
+                                setType("general");
+                                deleteItem(doc.id, "general");
+                              }}
+                              class="btn btn-xs btn-rounded-circle btn-danger"
+                            >
+                              <i class="fe fe-x"></i>
+                            </button>
+                          ) : null}
                         </td>
                       </tr>
                     ))}
@@ -231,12 +293,14 @@ export default function Listing() {
             <h4 className="fw-bold mb-1">Support</h4>
 
             <p className="fs-sm text-muted mb-0">
-            Support questions and problems
+              Support questions and problems
             </p>
           </div>
           <div className="col-auto">
             <span className="badge rounded-pill bg-dark-soft">
-              <span className="h6 text-uppercase">{support.length} request</span>
+              <span className="h6 text-uppercase">
+                {support.length} request
+              </span>
             </span>
           </div>
         </div>
@@ -269,7 +333,9 @@ export default function Listing() {
                             className="text-reset text-decoration-none"
                           >
                             <p className="mb-1">{doc.title}</p>
-                            <p className="fs-sm text-muted mb-0">{doc.id}</p>
+                            <p className="fs-sm text-muted mb-0">
+                              {doc.description}
+                            </p>
                           </a>
                         </td>
                         <td>
@@ -287,6 +353,17 @@ export default function Listing() {
                           >
                             <p className="fs-sm mb-0">{doc.location}</p>
                           </a>
+                          {doc.userEmail === user.email ? (
+                            <button
+                              onClick={() => {
+                                setType("support");
+                                deleteItem(doc.id, "support");
+                              }}
+                              class="btn btn-xs btn-rounded-circle btn-danger"
+                            >
+                              <i class="fe fe-x"></i>
+                            </button>
+                          ) : null}
                         </td>
                       </tr>
                     ))}

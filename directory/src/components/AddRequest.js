@@ -44,7 +44,7 @@ export default function AddRequest() {
       );
   };
   return (
-    <section class="pt-8 pt-md-11 pb-8 pb-md-14">
+    <section class="pt-2 pt-md-2 pb-2 pb-md-2">
       <div class="container">
         <div class="row">
           <div class="col-12">
