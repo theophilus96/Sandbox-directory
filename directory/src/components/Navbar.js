@@ -148,7 +148,7 @@ function Navbar() {
                   aria-labelledby="navbarDocumentation"
                 >
                   <div className="list-group list-group-flush">
-                    <a className="list-group-item" href="/blog">
+                    <a className="list-group-item" href="/contact">
                       {/* Icon */}
                       <div class="icon-circle bg-primary text-white">
                         <i class="fe fe-phone"></i>

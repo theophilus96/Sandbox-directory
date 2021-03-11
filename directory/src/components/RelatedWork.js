@@ -2,8 +2,11 @@ import React from "react";
 import MBSlogo from "../img/MBSLogo.jpg";
 import CraneLogo from "../img/CraneLogo.jpg";
 import JaneDesign2 from "../img/JaneDesign2.jpg";
+import useFirestore from "../hooks/useFirestore";
 
 function RelatedWork() {
+
+  const { docs } = useFirestore("company");
   return (
     <div>
       <section className="pt-7 pt-md-10 bg-light">
@@ -30,12 +33,15 @@ function RelatedWork() {
           </div>{" "}
           {/* / .row */}
           <div className="row">
-            <div className="col-12 col-md-6 col-lg-4 d-flex">
+
+          {docs &&
+              docs.slice(0, 3).map((doc) => (
+                <div className="col-12 col-md-6 col-lg-4 d-flex">
               {/* Card */}
-              <a className="card mb-6 mb-lg-0 shadow-light-lg" href="#!">
+              <a className="card mb-6 mb-lg-0 shadow-light-lg" href={`/company/${doc.id}`}>
                 {/* Image */}
                 <div className="card-zoom">
-                  <img className="card-img-top" src={MBSlogo} alt="..." />
+                  <img className="card-img-top" src={doc.image} alt="..." />
                 </div>
 
                 {/* Body */}
@@ -56,82 +62,17 @@ function RelatedWork() {
 
                   {/* Preheading */}
                   <h6 className="text-uppercase mb-1 text-muted">
-                    Residential Construction
+                    {doc.description}
                   </h6>
 
                   {/* Heading */}
-                  <h4 className="mb-0">Theo Construction</h4>
+                  <h4 className="mb-0">{doc.name}</h4>
                 </div>
               </a>
             </div>
-            <div className="col-12 col-md-6 col-lg-4 d-flex">
-              {/* Card */}
-              <a className="card mb-6 mb-lg-0 shadow-light-lg" href="#!">
-                {/* Image */}
-                <div className="card-zoom">
-                  <img className="card-img-top" src={CraneLogo} alt="..." />
-                </div>
 
-                {/* Body */}
-                <div className="card-body">
-                  {/* Shape */}
-                  <div className="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
-                    <svg
-                      viewBox="0 0 2880 48"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z"
-                        fill="currentColor"
-                      ></path>
-                    </svg>{" "}
-                  </div>
+              ))}
 
-                  {/* Preheading */}
-                  <h6 className="text-uppercase mb-1 text-muted">
-                    Civil Engineering
-                  </h6>
-
-                  {/* Heading */}
-                  <h4 className="mb-0">John Engineering</h4>
-                </div>
-              </a>
-            </div>
-            <div className="col-12 col-md-6 col-lg-4 d-flex">
-              {/* Card */}
-              <a className="card d-md-none d-lg-flex shadow-light-lg" href="#!">
-                {/* Image */}
-                <div className="card-zoom">
-                  <img className="card-img-top" src={JaneDesign2} alt="..." />
-                </div>
-
-                {/* Body */}
-                <div className="card-body">
-                  {/* Shape */}
-                  <div className="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
-                    <svg
-                      viewBox="0 0 2880 48"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z"
-                        fill="currentColor"
-                      ></path>
-                    </svg>{" "}
-                  </div>
-
-                  {/* Preheading */}
-                  <h6 className="text-uppercase mb-1 text-muted">
-                    Architectural Design
-                  </h6>
-
-                  {/* Heading */}
-                  <h4 className="mb-0">Jane Design Company</h4>
-                </div>
-              </a>
-            </div>
           </div>{" "}
           {/* / .row */}
         </div>{" "}

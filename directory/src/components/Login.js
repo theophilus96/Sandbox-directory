@@ -42,7 +42,7 @@ export default function Login() {
 
             {/* <!-- Text --> */}
             <p className="mb-6 text-muted">
-              Simplify your workflow in minutes.
+              Ease your burdens
             </p>
 
             {/* <!-- Form --> */}
@@ -83,16 +83,16 @@ export default function Login() {
                 type="submit"
                 onClick={signIn}
               >
-                Sign up
+                Login
               </button>
             </form>
 
             {/* <!-- Text --> */}
             <p className="mb-0 fs-sm text-muted">
-              Already have an account?{" "}
-              <button href="" onClick={register}>
-                Log in
-              </button>
+              Don't have an account?{" "}
+              <a href="" onClick={register}>
+                Sign up
+              </a>
               .
             </p>
           </div>

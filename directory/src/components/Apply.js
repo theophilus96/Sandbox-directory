@@ -18,11 +18,11 @@ function Apply() {
             </div>
             <div className="col-12 col-md-auto">
               {/* Button */}
-              <a href="#!" className="btn btn-primary-soft me-1 lift">
+              {/* <a href="#!" className="btn btn-primary-soft me-1 lift">
                 Learn more
-              </a>
+              </a> */}
 
-              <a href="#!" className="btn btn-primary lift">
+              <a href="/login" className="btn btn-primary lift">
                 Get started
               </a>
             </div>

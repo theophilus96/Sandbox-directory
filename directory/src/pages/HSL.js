@@ -9,7 +9,7 @@ function HSL() {
       <HSLsidebar />
       <RelatedWork />
       <Shape />
-      <Footer />7
+      <Footer />
     </div>
   );
 }

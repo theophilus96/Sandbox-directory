@@ -16,10 +16,11 @@ import Blog from "./pages/Blog";
 import TempCompanyGrid from "./components/TempCompanyGrid";
 import HSL from "./pages/HSL";
 import BlogPost from "./pages/BlogPost";
+import Problem from "./pages/Problem";
+import ContactPage from "./pages/ContactPage";
 //state
 import { auth } from "./firebase/config";
 import { useStateValue } from "./state/StateProvider";
-import Problem from "./pages/Problem";
 
 function App() {
   useEffect(() => {
@@ -60,6 +61,8 @@ function App() {
           <Route path="/company/:id" component={HSL}></Route>
           <Route exact path="/login" component={Login} />
           <Route exact path="/listing" component={Problem} />
+          <Route exact path="/contact" component={ContactPage} />
+
         </Switch>
       </Router>
     </div>
