@@ -3,6 +3,7 @@ import "./css/theme.css";
 import "./css/libs.css";
 import AOS from "aos";
 
+
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // components
@@ -49,6 +50,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        {/* <TestNavBar/> */}
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
