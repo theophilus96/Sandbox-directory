@@ -18445,9 +18445,9 @@ a.card:hover {
   position: absolute;
   width: 0;
   height: 0;
-  /* background-image: url(../img/masks/avatar-status.svg),
-    url(../img/masks/avatar-group.svg), url(../img/masks/avatar-group-hover.svg),
-    url(../img/masks/avatar-group-hover-last.svg); */
+  background-image: url(../masks/avatar-status.svg),
+    url(../masks/avatar-group.svg), url(../masks/avatar-group-hover.svg),
+    url(../masks/avatar-group-hover-last.svg);
 }
 .avatar-img {
   width: 100%;
@@ -18476,8 +18476,8 @@ a.card:hover {
 }
 .avatar-offline .avatar-img,
 .avatar-online .avatar-img {
-  /* -webkit-mask-image: url(../img/masks/avatar-status.svg);
-  mask-image: url(../img/masks/avatar-status.svg); */
+  -webkit-mask-image: url(../masks/avatar-status.svg);
+  mask-image: url(../masks/avatar-status.svg);
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
@@ -18562,8 +18562,8 @@ a.card:hover {
   margin-left: -1.25rem;
 }
 .avatar-group .avatar:not(:last-child) {
-  /* -webkit-mask-image: url(../img/masks/avatar-group.svg);
-  mask-image: url(../img/masks/avatar-group.svg); */
+  -webkit-mask-image: url(../masks/avatar-group.svg);
+  mask-image: url(../masks/avatar-group.svg);
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
@@ -18573,8 +18573,8 @@ a.card:hover {
   z-index: 1;
 }
 .avatar-group .avatar:hover + .avatar {
-  /* -webkit-mask-image: url(../img/masks/avatar-group-hover.svg);
-  mask-image: url(../img/masks/avatar-group-hover.svg); */
+  -webkit-mask-image: url(../masks/avatar-group-hover.svg);
+  mask-image: url(../masks/avatar-group-hover.svg);
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }

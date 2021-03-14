@@ -1,9 +1,23 @@
 import React from "react";
-import ConstructionImage3 from "../img/construction3.jpg";
 import useFirestore from "../hooks/useFirestore";
 import { Link } from "react-router-dom";
+import { projectFirestore } from "../firebase/config";
+import { useStateValue } from "../state/StateProvider";
 
 export default function BlogArticle() {
+  const [{ user }] = useStateValue();
+  const deleteItem = (id) => {
+    projectFirestore
+      .collection("blog")
+      .doc(id)
+      .delete()
+      .then(() => {
+        console.log("Document successfully deleted!");
+      })
+      .catch((error) => {
+        console.error("Error removing document: ", error);
+      });
+  };
 
   const { docs } = useFirestore("blog");
 
@@ -12,8 +26,8 @@ export default function BlogArticle() {
   return (
     <div>
       {docs &&
-        docs.map((doc) => 
-        <section className="pt-7 pt-md-10" key={doc.id}>
+        docs.map((doc) => (
+          <section key={doc.id} className="pt-7 pt-md-10" key={doc.id}>
             <div className="container">
               <div className="row">
                 <div className="col-12">
@@ -22,16 +36,27 @@ export default function BlogArticle() {
                     <div className="row gx-0">
                       <div className="col-12">
                         {/* <!-- Badge --> */}
+                        {user && doc.userEmail === user.email ? (
+                          <button
+                            onClick={() => {
+                              deleteItem(doc.id);
+                            }}
+                            className="btn btn-xs btn-rounded-circle btn-danger"
+                          >
+                            <i className="fe fe-x"></i>
+                          </button>
+                        ) : null}
                         <span className="badge rounded-pill bg-light badge-float badge-float-inside">
                           <span className="h6 text-uppercase">Featured</span>
                         </span>
                       </div>
+
                       <Link
                         className="col-12 col-md-6 order-md-2 bg-cover card-img-end"
                         style={{
                           backgroundImage: `url(${doc.image})`,
                         }}
-                        to={`/blog/${doc}`}
+                        to={`/blog/${doc.id}`}
                       >
                         {/* <!-- Image (placeholder) --> */}
                         <img
@@ -65,7 +90,7 @@ export default function BlogArticle() {
                         </a>
 
                         {/* <!-- Meta --> */}
-                        <a className="card-meta" href="#!">
+                        <a className="card-meta" href={`/blog/${doc.id}`}>
                           {/* <!-- Divider --> */}
                           <hr className="card-meta-divider"></hr>
 
@@ -85,7 +110,13 @@ export default function BlogArticle() {
 
                           {/* <!-- Date --> */}
                           <p className="h6 text-uppercase text-muted mb-0 ms-auto">
-                            <time datetime="">{new Date(doc.date.seconds * 1000).toDateString("en-US")}</time>
+                            <time>
+                              {doc.date
+                                ? new Date(
+                                    doc.date.seconds * 1000
+                                  ).toDateString("en-US")
+                                : Date.now()}
+                            </time>
                           </p>
                         </a>
                       </div>
@@ -95,7 +126,7 @@ export default function BlogArticle() {
               </div>
             </div>
           </section>
-        )}
+        ))}
     </div>
   );
 }

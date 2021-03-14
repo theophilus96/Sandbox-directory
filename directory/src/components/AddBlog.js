@@ -1,47 +1,95 @@
-import React, { useState } from "react";
-import { projectFirestore } from "../firebase/config";
+import React, { useState, useEffect } from "react";
+import {
+  projectStorage,
+  projectFirestore,
+  timestamp,
+} from "../firebase/config";
 import { useStateValue } from "../state/StateProvider";
 
-export default function AddRequest() {
+export default function AddBlog() {
   const [{ user }] = useStateValue();
-  //useState() hook captures the value from the input value
-  const [title, setTitle] = useState("");
-  const [company, setCompany] = useState("");
-  //   const [username, setUsername] = useState("");
-  const [description, setDescription] = useState("");
-  const [type, setType] = useState("");
-  const [location, setLocation] = useState("");
 
-  /* The onSubmit function we takes the 'e'
-    or event and submits it to Firebase
-    */
-   
-    const userEmail = user.email
+  const [userName, setUserName] = useState("");
+  const [userImage, setUserImage] = useState("");
+  const [title, setTitle] = useState("");
+  const [shortDesc, setShortDesc] = useState("");
+  const [longDesc, setLongDesc] = useState("");
+
+  //storage
+  const [file, setFile] = useState(null);
+  const [url, setURL] = useState("");
+
+  function handleChange(e) {
+    setFile(e.target.files[0]);
+  }
+
+  useEffect(() => {
+    if (user) {
+      projectFirestore
+        .collection("users")
+        .doc(user.uid)
+        .onSnapshot(
+          {
+            // Listen for document metadata changes
+            includeMetadataChanges: true,
+          },
+          (doc) =>
+            console.log(
+              "user documents",
+              doc.data().name,
+              setUserName(doc.data().name),
+              setUserImage(doc.data().image)
+            )
+        );
+    }
+  }, [user]);
+  //   author
+  // authorImage
+  // date
+  // image
+  // longDesc
+  // shortDesc
+  // title
+
   const onSubmit = (e) => {
     /* 
     preventDefault is important because it
     prevents the whole page from reloading
     */
     e.preventDefault();
-    projectFirestore
-      .collection("problem")
-      .doc("tLQSvrHR9fE5fI2mv7TV")
-      .collection(type)
-      .add({
-        title,
-        company,
-        userEmail,
-        description,
-        location,
-      })
-      //.then will reset the form to nothing
-      .then(
-        () => setTitle(""),
-        setCompany(""),
-        setType(""),
-        setLocation(""),
-        setDescription("")
-      );
+
+    const storageRef = projectStorage.ref(file.name);
+    const collectionRef = projectFirestore.collection("blog");
+
+    storageRef.put(file).on(
+      "state_changed",
+      (snap) => {
+        let percentage = (snap.bytesTransferred / snap.totalBytes) * 100;
+        console.log("progress bar", percentage);
+      },
+      (err) => {
+        console.log(err);
+      },
+      async () => {
+        const url = await storageRef.getDownloadURL();
+        const createdAt = timestamp();
+        await collectionRef.add({
+          author: userName,
+          authorImage: userImage,
+          date: createdAt,
+          title,
+          shortDesc,
+          longDesc,
+          image: url,
+          userEmail: user.email
+        });
+        setTitle("");
+        setShortDesc("");
+        setLongDesc("");
+        setFile(null);
+        setURL("");
+      }
+    );
   };
   return (
     <section className="pt-2 pt-md-2 pb-2 pb-md-2">
@@ -57,13 +105,13 @@ export default function AddRequest() {
                     <div className="col-12 col-md-6">
                       <div className="form-group mb-5">
                         <label className="form-label" for="applyName">
-                          Title of Problem
+                          Blog Title
                         </label>
                         <input
                           className="form-control"
                           placeholder="Title"
                           value={title}
-                          name="title"
+                          name="Title"
                           /* onChange takes the event and set it to whatever
       is currently in the input. 'e' is equal to the event
       happening. currentTarget.value is what is inputted
@@ -76,47 +124,14 @@ export default function AddRequest() {
                     <div className="col-12 col-md-6">
                       <div className="form-group mb-5">
                         <label className="form-label" for="applyEmail">
-                          Company
+                          Short Description
                         </label>
                         <input
                           className="form-control"
-                          placeholder="Company"
-                          value={company}
-                          name="company"
-                          onChange={(e) => setCompany(e.currentTarget.value)}
-                          type="text"
-                        ></input>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="row">
-                    <div className="col-12 col-md-6">
-                      <div className="form-group mb-5">
-                        <label className="form-label" for="Location">
-                          Location
-                        </label>
-                        <input
-                          className="form-control"
-                          placeholder="Location"
-                          value={location}
-                          name="location"
-                          onChange={(e) => setLocation(e.currentTarget.value)}
-                          type="text"
-                        ></input>
-                      </div>
-                    </div>
-                    <div className="col-12 col-md-6">
-                      <div className="form-group mb-5">
-                        <label className="form-label" for="applyEmail">
-                          Type of problem
-                        </label>
-                        <input
-                          className="form-control"
-                          placeholder="Type"
-                          value={type}
-                          name="type"
-                          onChange={(e) => setType(e.currentTarget.value)}
+                          placeholder="Summary"
+                          value={shortDesc}
+                          name="shortDesc"
+                          onChange={(e) => setShortDesc(e.currentTarget.value)}
                           type="text"
                         ></input>
                       </div>
@@ -125,21 +140,32 @@ export default function AddRequest() {
                   <div className="row">
                     <div className="form-group mb-5">
                       <label className="form-label" for="applyName">
-                        Description of problem
+                        Blog
                       </label>
                       <input
                         className="form-control"
-                        placeholder="Description"
-                        value={description}
-                        name="description"
-                        onChange={(e) => setDescription(e.currentTarget.value)}
+                        placeholder="Blog"
+                        value={longDesc}
+                        name="longDesc"
+                        onChange={(e) => setLongDesc(e.currentTarget.value)}
                         type="text"
                       ></input>
                     </div>
                   </div>
+                  <div className="row">
+                    <label className="form-label" for="applyName">
+                      Image of company
+                    </label>
+                    <div className="form-group mb-5">
+                      <input type="file" onChange={handleChange} />
+                    </div>
+                  </div>
                   <div className="row align-items-center">
                     <div className="col-12 col-md">
-                      <button className="btn btn-primary mb-6 mb-md-0 lift">
+                      <button
+                        className="btn btn-primary mb-6 mb-md-0 lift"
+                        disabled={!file}
+                      >
                         Submit <i className="fe fe-arrow-right ms-3"></i>
                       </button>
                     </div>

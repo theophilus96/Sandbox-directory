@@ -30,10 +30,10 @@ export default function Listing() {
 
   // console.log(engineering);
   return (
-    <section class="pt-12 pt-md-12 bt-2 py-md-2">
-      <div class="container pb-8 pb-md-11 ">
+    <section className="pt-12 pt-md-12 bt-2 py-md-2">
+      <div className="container pb-8 pb-md-11 ">
         <div className="row align-items-center mb-5">
-          <div class="col">
+          <div className="col">
             <h4 className="fw-bold mb-1">Design</h4>
 
             <p className="fs-sm text-muted mb-0">
@@ -95,15 +95,15 @@ export default function Listing() {
                           >
                             <p className="fs-sm mb-0">{doc.location}</p>
                           </a>
-                          {doc.userEmail === user.email ? (
+                          {user && (doc.userEmail === user.email) ? (
                             <button
                               onClick={() => {
                                 setType("design");
                                 deleteItem(doc.id, "design");
                               }}
-                              class="btn btn-xs btn-rounded-circle btn-danger"
+                              className="btn btn-xs btn-rounded-circle btn-danger"
                             >
-                              <i class="fe fe-x"></i>
+                              <i className="fe fe-x"></i>
                             </button>
                           ) : null}
                         </td>
@@ -115,9 +115,9 @@ export default function Listing() {
           </div>
         </div>
       </div>
-      <div class="container pb-8 pb-md-11">
+      <div className="container pb-8 pb-md-11">
         <div className="row align-items-center mb-5">
-          <div class="col">
+          <div className="col">
             <h4 className="fw-bold mb-1">Engineering</h4>
 
             <p className="fs-sm text-muted mb-0">
@@ -181,15 +181,15 @@ export default function Listing() {
                           >
                             <p className="fs-sm mb-0">{doc.location}</p>
                           </a>
-                          {doc.userEmail === user.email ? (
+                          {user && (doc.userEmail === user.email) ? (
                             <button
                               onClick={() => {
                                 setType("engineering");
                                 deleteItem(doc.id, "engineering");
                               }}
-                              class="btn btn-xs btn-rounded-circle btn-danger"
+                              className="btn btn-xs btn-rounded-circle btn-danger"
                             >
-                              <i class="fe fe-x"></i>
+                              <i className="fe fe-x"></i>
                             </button>
                           ) : null}
                         </td>
@@ -201,9 +201,9 @@ export default function Listing() {
           </div>
         </div>
       </div>
-      <div class="container pb-8 pb-md-11 ">
+      <div className="container pb-8 pb-md-11 ">
         <div className="row align-items-center mb-5">
-          <div class="col">
+          <div className="col">
             <h4 className="fw-bold mb-1">General</h4>
 
             <p className="fs-sm text-muted mb-0">
@@ -267,15 +267,15 @@ export default function Listing() {
                           >
                             <p className="fs-sm mb-0">{doc.location}</p>
                           </a>
-                          {doc.userEmail === user.email ? (
+                          {user && (doc.userEmail === user.email) ? (
                             <button
                               onClick={() => {
                                 setType("general");
                                 deleteItem(doc.id, "general");
                               }}
-                              class="btn btn-xs btn-rounded-circle btn-danger"
+                              className="btn btn-xs btn-rounded-circle btn-danger"
                             >
-                              <i class="fe fe-x"></i>
+                              <i className="fe fe-x"></i>
                             </button>
                           ) : null}
                         </td>
@@ -287,9 +287,9 @@ export default function Listing() {
           </div>
         </div>
       </div>
-      <div class="container pb-8 pb-md-11 border-bottom border-gray-300">
+      <div className="container pb-8 pb-md-11 border-bottom border-gray-300">
         <div className="row align-items-center mb-5">
-          <div class="col">
+          <div className="col">
             <h4 className="fw-bold mb-1">Support</h4>
 
             <p className="fs-sm text-muted mb-0">
@@ -353,15 +353,15 @@ export default function Listing() {
                           >
                             <p className="fs-sm mb-0">{doc.location}</p>
                           </a>
-                          {doc.userEmail === user.email ? (
+                          {user && (doc.userEmail === user.email) ? (
                             <button
                               onClick={() => {
                                 setType("support");
                                 deleteItem(doc.id, "support");
                               }}
-                              class="btn btn-xs btn-rounded-circle btn-danger"
+                              className="btn btn-xs btn-rounded-circle btn-danger"
                             >
-                              <i class="fe fe-x"></i>
+                              <i className="fe fe-x"></i>
                             </button>
                           ) : null}
                         </td>

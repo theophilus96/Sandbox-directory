@@ -9,11 +9,9 @@ function HSLsidebar(doc) {
   const { docs } = useFirestore("company");
   docs && docs.map((doc) => console.log(doc.name));
 
-
   const [companyData, setcompanyData] = useState("");
   const { id } = useParams();
   console.log("id = ", id);
-
 
   var docRef = projectFirestore.collection("company").doc(id);
 
@@ -33,7 +31,6 @@ function HSLsidebar(doc) {
         console.log("Error getting document:", error);
       });
   }, []);
-
 
   console.log("companyData = ", companyData);
   // var desc = docs[0]?.longDescription;
@@ -56,7 +53,9 @@ function HSLsidebar(doc) {
             </div>
 
             {/* Text */}
-            <p className="fs-lg mb-7 text-muted">{companyData.longDescription}</p>
+            <p className="fs-lg mb-7 text-muted">
+              {companyData.longDescription}
+            </p>
 
             {/* List group */}
             <ul className="list-group list-group-flush">
@@ -85,7 +84,8 @@ function HSLsidebar(doc) {
         </div>
         <div className="col-12 col-md-7">
           {/* Images */}
-          <HSLprojects />
+          <HSLprojects companyID={id} />
+          {console.log("doc id", id)}
         </div>
       </div>
     </div>

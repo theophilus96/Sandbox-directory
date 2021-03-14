@@ -1,43 +1,48 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../firebase/config";
+
+import { projectFirestore } from "../firebase/config";
 //picture
 
-export default function Login() {
+export default function SignUp() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const signIn = (e) => {
-    e.preventDefault();
-    auth
-      .signInWithEmailAndPassword(email, password)
-      .then((auth) => {
-        history.push("/");
-      })
-      .catch((error) => alert(error.message));
-  };
+  const [fullName, setFullName] = useState("");
+  const [role, setRole] = useState("");
+  const [company, setCompany] = useState("");
 
   const register = (e) => {
     e.preventDefault();
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
-        console.log(auth);
+        console.log("auth = ", auth.user.uid);
         if (auth) {
+          logUser(auth.user.uid);
           history.push("/");
         }
       })
       .catch((error) => alert(error.message));
   };
 
+  function logUser(id) {
+    projectFirestore.collection("users").doc(id).set({
+      name: fullName,
+      role: role,
+      company: company,
+    });
+    //ref.set(obj);  //or however you wish to update the node
+  }
   return (
     <section>
       <div className="container d-flex flex-column">
         <div className="row align-items-center justify-content-center gx-0 min-vh-100">
           <div className="col-12 col-md-6 col-lg-4 py-8 py-md-11">
             {/* <!-- Heading --> */}
-            <h1 className="mb-0 fw-bold">Sign In</h1>
+            <h1 className="mb-0 fw-bold">Sign Up</h1>
 
             {/* <!-- Text --> */}
             <p className="mb-6 text-muted">Ease your burdens</p>
@@ -74,11 +79,51 @@ export default function Login() {
                 ></input>
               </div>
 
+              <div className="form-group mb-5">
+                <label className="form-label" for="password">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                ></input>
+              </div>
+              <div className="form-group mb-5">
+                <label className="form-label" for="password">
+                  Role
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="role"
+                  placeholder="Enter your role"
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
+                ></input>
+              </div>
+              <div className="form-group mb-5">
+                <label className="form-label" for="password">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="company"
+                  placeholder="Enter your company"
+                  value={company}
+                  onChange={(e) => setCompany(e.target.value)}
+                ></input>
+              </div>
+
               {/* <!-- Submit --> */}
               <button
                 className="btn w-100 btn-primary"
                 type="submit"
-                onClick={signIn}
+                onClick={register}
               >
                 Login
               </button>
@@ -86,11 +131,7 @@ export default function Login() {
 
             {/* <!-- Text --> */}
             <p className="mb-0 fs-sm text-muted">
-              Don't have an account?{" "}
-              <a href="/signup">
-                Sign up
-              </a>
-              .
+              Already have an account? <a href="/login">Log In</a>.
             </p>
           </div>
           <div className="col-lg-7 offset-lg-1 align-self-stretch d-none d-lg-block">

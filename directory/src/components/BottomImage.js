@@ -6,7 +6,7 @@ function BottomImage() {
     <section
       data-jarallax=""
       data-speed=".8"
-      class="py-14 py-lg-16 jarallax"
+      className="py-14 py-lg-16 jarallax"
       style={{ backgroundImage: `url(${ConstructionImage7})`, position: "relative", zIndex: 0 }}
       data-jarallax-original-styles={{
         backgroundImage: `url(${ConstructionImage7})`,
@@ -15,7 +15,7 @@ function BottomImage() {
       }}
     >
       {/* Shape */}
-      <div class="shape shape-top shape-fluid-x svg-shim text-white">
+      <div className="shape shape-top shape-fluid-x svg-shim text-white">
         <svg
           viewBox="0 0 2880 250"
           fill="none"
@@ -26,7 +26,7 @@ function BottomImage() {
       </div>
 
       {/* Shape */}
-      <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+      <div className="shape shape-bottom shape-fluid-x svg-shim text-light">
         <svg
           viewBox="0 0 2880 250"
           fill="none"

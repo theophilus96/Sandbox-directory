@@ -3,9 +3,26 @@ import HSLlogo from "../img/HSLproject2.jpg";
 import MBSlogo from "../img/MBSLogo.jpg";
 import CraneLogo from "../img/CraneLogo.jpg";
 import useFirestore from "../hooks/useFirestore";
-import { Switch, Link, Route, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
+import AddCompany from "./AddCompany";
+import { projectFirestore } from "../firebase/config";
+import { useStateValue } from "../state/StateProvider";
 
 function CompanyGrid({ match }) {
+  const [{ user }] = useStateValue();
+  const deleteItem = (id) => {
+    projectFirestore
+      .collection("company")
+      .doc(id)
+      .delete()
+      .then(() => {
+        console.log("Document successfully deleted!");
+      })
+      .catch((error) => {
+        console.error("Error removing document: ", error);
+      });
+  };
+  
   console.log(match);
   const CompanyData = [
     {
@@ -42,10 +59,13 @@ function CompanyGrid({ match }) {
           >
             {docs &&
               docs.map((doc) => (
-                <div className="col-12 col-md-4 product">
+                <div key={doc.id} className="col-12 col-md-4 product">
                   {/* style={{ position: "absolute", left: "0px", top: "0px" }} */}
 
-                  <Link to={`/company/${doc.id}`} className="card card-flush mb-7">
+                  <Link
+                    to={`/company/${doc.id}`}
+                    className="card card-flush mb-7"
+                  >
                     {/* Image */}
                     <div className="card-zoom">
                       <img
@@ -67,6 +87,16 @@ function CompanyGrid({ match }) {
                       <h4 className="mb-0">{doc.name}</h4>
                     </div>
                   </Link>
+                  {user && doc.userEmail === user.email ? (
+                    <button
+                      onClick={() => {
+                        deleteItem(doc.id);
+                      }}
+                      className="btn btn-xs btn-rounded-circle btn-danger"
+                    >
+                      <i className="fe fe-x"></i>
+                    </button>
+                  ) : null}
                 </div>
               ))}
 
@@ -244,6 +274,7 @@ function CompanyGrid({ match }) {
           </div>
         </div>
       </section>
+      <AddCompany />
     </div>
   );
 }

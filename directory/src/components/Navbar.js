@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SandBoxLogo from "../icons/SandboxLogo.png";
 //state
-import { auth } from "../firebase/config";
+import { auth, projectFirestore } from "../firebase/config";
 import { useStateValue } from "../state/StateProvider";
 function Navbar() {
   const [{ user }, dispatch] = useStateValue();
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    if (user) {
+      projectFirestore
+        .collection("users")
+        .doc(user.uid)
+        .onSnapshot(
+          {
+            // Listen for document metadata changes
+            includeMetadataChanges: true,
+          },
+          (doc) =>
+            console.log(
+              "user documents",
+              doc.data().name,
+              setUserName(doc.data().name)
+            )
+        );
+    }
+  }, [user]);
 
   const handleAuthentication = () => {
     if (user) {
@@ -150,10 +171,9 @@ function Navbar() {
                   <div className="list-group list-group-flush">
                     <a className="list-group-item" href="/contact">
                       {/* Icon */}
-                      <div class="icon-circle bg-primary text-white">
-                        <i class="fe fe-phone"></i>
+                      <div className="icon-circle bg-primary text-white">
+                        <i className="fe fe-phone"></i>
                       </div>
-
 
                       {/* Content */}
                       <div className="ms-4">
@@ -171,15 +191,10 @@ function Navbar() {
                   </div>
                 </div>
               </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  onClick={handleAuthentication}
-                  href={!user && "/login"}
-                >
-                  Hello {!user ? "Guest" : user.email}
-                </a>
+              <li className="nav-item">
+                <Link className="nav-link" to={user ? "/profile" : "/login"}>
+                  Hello {!user ? "Guest" : userName}
+                </Link>
               </li>
             </ul>
 
