@@ -62,7 +62,7 @@ export default function BlogHeader() {
                   ></input>
 
                   <span className="input-group-text border-0 py-0 ps-1 pe-3">
-                    <a className="btn btn-sm btn-primary" href="blog-search.html">
+                    <a className="btn btn-sm btn-primary" href="#!">
                       Search
                     </a>
                   </span>
@@ -79,25 +79,25 @@ export default function BlogHeader() {
                   {/* <!-- Badges --> */}
                   <a
                     className="badge rounded-pill bg-secondary-soft"
-                    href="blog-search.html"
+                    href="#!"
                   >
                     <span className="h6 text-uppercase">Design</span>
                   </a>
                   <a
                     className="badge rounded-pill bg-secondary-soft"
-                    href="blog-search.html"
+                    href="#!"
                   >
                     <span className="h6 text-uppercase">Product</span>
                   </a>
                   <a
                     className="badge rounded-pill bg-secondary-soft"
-                    href="blog-search.html"
+                    href="#!"
                   >
                     <span className="h6 text-uppercase">UX</span>
                   </a>
                   <a
                     className="badge rounded-pill bg-secondary-soft"
-                    href="blog-search.html"
+                    href="#!"
                   >
                     <span className="h6 text-uppercase">Resources</span>
                   </a>

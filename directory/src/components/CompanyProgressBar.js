@@ -1,6 +1,5 @@
 import React, {useEffect}from 'react'
 import useCompanyStorage from '../hooks/useCompanyStorage';
-import useStorage from "../hooks/useStorage";
 
 export default function CompanyProgressBar({ file, setFile , DocRefID}) {
     const { progress, url } = useCompanyStorage(file, DocRefID);

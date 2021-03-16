@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { auth } from "../firebase/config";
 
 import { projectFirestore } from "../firebase/config";
@@ -51,7 +51,7 @@ export default function SignUp() {
             <form className="mb-6">
               {/* <!-- Email --> */}
               <div className="form-group">
-                <label className="form-label" for="email">
+                <label className="form-label" htmlFor="email">
                   Email Address
                 </label>
                 <input
@@ -66,7 +66,7 @@ export default function SignUp() {
 
               {/* <!-- Password --> */}
               <div className="form-group mb-5">
-                <label className="form-label" for="password">
+                <label className="form-label" htmlFor="password">
                   Password
                 </label>
                 <input
@@ -80,7 +80,7 @@ export default function SignUp() {
               </div>
 
               <div className="form-group mb-5">
-                <label className="form-label" for="password">
+                <label className="form-label" htmlFor="name">
                   Name
                 </label>
                 <input
@@ -93,7 +93,7 @@ export default function SignUp() {
                 ></input>
               </div>
               <div className="form-group mb-5">
-                <label className="form-label" for="password">
+                <label className="form-label" htmlFor="role">
                   Role
                 </label>
                 <input
@@ -106,7 +106,7 @@ export default function SignUp() {
                 ></input>
               </div>
               <div className="form-group mb-5">
-                <label className="form-label" for="password">
+                <label className="form-label" htmlFor="Company">
                   Company
                 </label>
                 <input
@@ -125,7 +125,7 @@ export default function SignUp() {
                 type="submit"
                 onClick={register}
               >
-                Login
+                Sign Up
               </button>
             </form>
 

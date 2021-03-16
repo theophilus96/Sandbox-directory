@@ -1,6 +1,20 @@
 import React from "react";
+import useFirestore from "../hooks/useFirestore";
 
 function Stats() {
+  const design = useFirestore("problem/tLQSvrHR9fE5fI2mv7TV/design").docs;
+  const engineering = useFirestore("problem/tLQSvrHR9fE5fI2mv7TV/engineering")
+    .docs;
+
+  const general = useFirestore("problem/tLQSvrHR9fE5fI2mv7TV/general").docs;
+
+  const support = useFirestore("problem/tLQSvrHR9fE5fI2mv7TV/support").docs;
+
+  const company = useFirestore("company").docs;
+
+  const partner = useFirestore("users").docs;
+
+
   return (
     <div>
       {/* PLACEMENT RATES */}
@@ -27,9 +41,8 @@ function Stats() {
                       data-aos
                       data-aos-id="countup:in"
                     >
-                      0
+                      {company.length}
                     </span>
-                    k
                   </h3>
                   <p className="text-gray-700 mb-0">Companies</p>
                 </div>
@@ -41,9 +54,8 @@ function Stats() {
                       data-aos
                       data-aos-id="countup:in"
                     >
-                      0
+                      {design.length+engineering.length+general.length+support.length}
                     </span>
-                    k
                   </h3>
                   <p className="text-gray-700 mb-0">Requests</p>
                 </div>
@@ -55,9 +67,8 @@ function Stats() {
                       data-aos
                       data-aos-id="countup:in"
                     >
-                      0.0
+                      {partner.length}
                     </span>
-                    k
                   </h3>
                   <p className="text-gray-700 mb-0">Partnerships</p>
                 </div>

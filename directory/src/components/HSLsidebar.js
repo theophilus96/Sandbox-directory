@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 function HSLsidebar(doc) {
   const { docs } = useFirestore("company");
-  docs && docs.map((doc) => console.log(doc.name));
+  // docs && docs.map((doc) => console.log(doc.name));
 
   const [companyData, setcompanyData] = useState("");
   const { id } = useParams();

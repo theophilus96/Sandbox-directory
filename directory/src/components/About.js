@@ -60,34 +60,24 @@ function About() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g fill="none" fillRule="evenodd">
-                      <path d="M0 0h24v24H0z" />
+                      <path d="M0 0h24v24H0z"></path>
                       <path
-                        d="M8 3v.5A1.5 1.5 0 009.5 5h5A1.5 1.5 0 0016 3.5V3h2a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h2z"
+                        d="M13.5 21v-3a1 1 0 00-1-1h-1a1 1 0 00-1 1v3H5V4a2 2 0 012-2h10a2 2 0 012 2v17h-5.5zM9 4a1 1 0 00-1 1v1a1 1 0 001 1h1a1 1 0 001-1V5a1 1 0 00-1-1H9zm5 0a1 1 0 00-1 1v1a1 1 0 001 1h1a1 1 0 001-1V5a1 1 0 00-1-1h-1zM9 8a1 1 0 00-1 1v1a1 1 0 001 1h1a1 1 0 001-1V9a1 1 0 00-1-1H9zm0 4a1 1 0 00-1 1v1a1 1 0 001 1h1a1 1 0 001-1v-1a1 1 0 00-1-1H9zm5 0a1 1 0 00-1 1v1a1 1 0 001 1h1a1 1 0 001-1v-1a1 1 0 00-1-1h-1z"
                         fill="#335EEA"
-                        opacity=".3"
-                      />
+                      ></path>
+                      <rect
+                        fill="#FFF"
+                        x="13"
+                        y="8"
+                        width="3"
+                        height="3"
+                        rx="1"
+                      ></rect>
                       <path
-                        d="M11 2a1 1 0 012 0h1.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5H11z"
-                        fill="#335EEA"
-                      />
-                      <rect
+                        d="M4 21h16a1 1 0 011 1v.4a.6.6 0 01-.6.6H3.6a.6.6 0 01-.6-.6V22a1 1 0 011-1z"
                         fill="#335EEA"
                         opacity=".3"
-                        x="7"
-                        y="10"
-                        width="5"
-                        height="2"
-                        rx="1"
-                      />
-                      <rect
-                        fill="#335EEA"
-                        opacity=".3"
-                        x="7"
-                        y="14"
-                        width="9"
-                        height="2"
-                        rx="1"
-                      />
+                      ></path>
                     </g>
                   </svg>{" "}
                 </div>
@@ -112,28 +102,31 @@ function About() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g fill="none" fillRule="evenodd">
-                      <path d="M0 0h24v24H0z" />
+                      <path d="M0 0h24v24H0z"></path>
                       <path
-                        d="M3.5 21h17a1.5 1.5 0 001.5-1.5v-11A1.5 1.5 0 0020.5 7H10L7.44 4.44A1.5 1.5 0 006.378 4H3.5A1.5 1.5 0 002 5.5v14A1.5 1.5 0 003.5 21z"
+                        d="M10 4h11a1 1 0 011 1v2a1 1 0 01-1 1H10a1 1 0 01-1-1V5a1 1 0 011-1zm0 6h11a1 1 0 011 1v2a1 1 0 01-1 1H10a1 1 0 01-1-1v-2a1 1 0 011-1zm0 6h11a1 1 0 011 1v2a1 1 0 01-1 1H10a1 1 0 01-1-1v-2a1 1 0 011-1z"
+                        fill="#335EEA"
+                      ></path>
+                      <rect
                         fill="#335EEA"
                         opacity=".3"
-                      />
-                      <path
-                        d="M12 17.228l-2.198 1.207a.527.527 0 01-.727-.236.585.585 0 01-.054-.357l.42-2.557-1.778-1.812a.58.58 0 01-.01-.795.53.53 0 01.308-.164l2.457-.373 1.1-2.327a.528.528 0 01.965 0l1.099 2.327 2.457.373a.56.56 0 01.455.637.572.572 0 01-.157.322l-1.778 1.812.42 2.557a.56.56 0 01-.44.65.518.518 0 01-.34-.057L12 17.228z"
-                        fill="#335EEA"
-                        opacity=".3"
-                      />
+                        x="2"
+                        y="4"
+                        width="5"
+                        height="16"
+                        rx="1"
+                      ></rect>
                     </g>
                   </svg>{" "}
                 </div>
 
                 <div className="ms-5">
                   {/* Heading */}
-                  <h4 className="mb-1">Projects Viewer</h4>
+                  <h4 className="mb-1">Request Viewer</h4>
 
                   {/* Text */}
                   <p className="text-muted mb-0">
-                    Showcase your projects to the world.
+                    Find your next client or partner her
                   </p>
                 </div>
               </div>

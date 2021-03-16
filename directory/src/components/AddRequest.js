@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { projectFirestore } from "../firebase/config";
 import { useStateValue } from "../state/StateProvider";
 
@@ -15,8 +15,11 @@ export default function AddRequest() {
   /* The onSubmit function we takes the 'e'
     or event and submits it to Firebase
     */
-   
-    const userEmail = user.email
+  useEffect(() => {
+    console.log("type: ", type);
+  }, [type, setType]);
+
+  const userEmail = user.email;
   const onSubmit = (e) => {
     /* 
     preventDefault is important because it
@@ -109,16 +112,68 @@ export default function AddRequest() {
                     <div className="col-12 col-md-6">
                       <div className="form-group mb-5">
                         <label className="form-label" for="applyEmail">
-                          Type of problem
+                          Type of problem 
                         </label>
-                        <input
+
+                        {/* <input
                           className="form-control"
                           placeholder="Type"
                           value={type}
                           name="type"
                           onChange={(e) => setType(e.currentTarget.value)}
                           type="text"
-                        ></input>
+                        ></input> */}
+
+                        <div class="dropdown me-1 mb-1">
+                          <button
+                            class="btn btn-primary dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButtonTwo"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            { type? type: "Select Problem"}
+                          </button>
+                          <div
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButtonTwo"
+                            style={{ margin: 0 }}
+                          >
+                            <a
+                              class="dropdown-item"
+                              href="#!"
+                              onClick={(e) => setType("design")}
+                              value="design"
+                            >
+                              Design
+                            </a>
+                            <a
+                              class="dropdown-item"
+                              href="#!"
+                              onClick={(e) => setType("engineering")}
+                              value="engineering"
+                            >
+                              Engineering
+                            </a>
+                            <a
+                              class="dropdown-item"
+                              href="#!"
+                              onClick={(e) => setType("general")}
+                              value="general"
+                            >
+                              General
+                            </a>
+                            <a
+                              class="dropdown-item"
+                              href="#!"
+                              onClick={(e) => setType("support")}
+                              value="support"
+                            >
+                              Support
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

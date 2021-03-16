@@ -30,7 +30,7 @@ export default function UploadImage() {
             type="file"
             onChange={handleChange}
           />
-          <label className="custom-file-label" for="projectCoverUploads">
+          <label className="custom-file-label" htmlFor="projectCoverUploads">
             {error && <div>{error}</div>}
             {file && <div>{file.name}</div>}
             <ProgressBar file={file} setFile={setFile}/>

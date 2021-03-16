@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import {  useHistory } from "react-router-dom";
 import { auth } from "../firebase/config";
 //picture
 
@@ -18,18 +18,18 @@ export default function Login() {
       .catch((error) => alert(error.message));
   };
 
-  const register = (e) => {
-    e.preventDefault();
-    auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((auth) => {
-        console.log(auth);
-        if (auth) {
-          history.push("/");
-        }
-      })
-      .catch((error) => alert(error.message));
-  };
+  // const register = (e) => {
+  //   e.preventDefault();
+  //   auth
+  //     .createUserWithEmailAndPassword(email, password)
+  //     .then((auth) => {
+  //       console.log(auth);
+  //       if (auth) {
+  //         history.push("/");
+  //       }
+  //     })
+  //     .catch((error) => alert(error.message));
+  // };
 
   return (
     <section>
@@ -46,7 +46,7 @@ export default function Login() {
             <form className="mb-6">
               {/* <!-- Email --> */}
               <div className="form-group">
-                <label className="form-label" for="email">
+                <label className="form-label" htmlFor="email">
                   Email Address
                 </label>
                 <input
@@ -61,7 +61,7 @@ export default function Login() {
 
               {/* <!-- Password --> */}
               <div className="form-group mb-5">
-                <label className="form-label" for="password">
+                <label className="form-label" htmlFor="password">
                   Password
                 </label>
                 <input

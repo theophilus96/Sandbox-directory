@@ -1,7 +1,15 @@
 import React from "react";
+import useFirestore from "../hooks/useFirestore";
 import ConstructionIllustration from "../illustration/illustration1.jpg";
 
 function RequestPost() {
+  const design = useFirestore("problem/tLQSvrHR9fE5fI2mv7TV/design").docs;
+  const engineering = useFirestore("problem/tLQSvrHR9fE5fI2mv7TV/engineering")
+    .docs;
+
+  const general = useFirestore("problem/tLQSvrHR9fE5fI2mv7TV/general").docs;
+
+  const support = useFirestore("problem/tLQSvrHR9fE5fI2mv7TV/support").docs;
   return (
     <div>
       {/* LATEST POSTS */}
@@ -207,7 +215,7 @@ function RequestPost() {
                 href="/listing"
                 className="btn w-100 btn-primary d-flex align-items-center lift"
               >
-                View over 10,000 other request{" "}
+                View {design.length+engineering.length+general.length+support.length} other request{" "}
                 <i className="fe fe-arrow-right ms-auto"></i>
               </a>
             </div>

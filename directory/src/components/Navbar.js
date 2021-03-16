@@ -136,7 +136,7 @@ function Navbar() {
                   className="nav-link dropdown-toggle"
                   id="navbarPages"
                   data-bs-toggle="dropdown"
-                  href="#"
+                  href="#!"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
@@ -171,9 +171,20 @@ function Navbar() {
                   <div className="list-group list-group-flush">
                     <a className="list-group-item" href="/contact">
                       {/* Icon */}
-                      <div className="icon-circle bg-primary text-white">
-                        <i className="fe fe-phone"></i>
-                      </div>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g fill="none" fillRule="evenodd">
+                          <path d="M0 0h24v24H0z"></path>
+                          <path
+                            d="M11.915 14.143l2.204-2.204a2 2 0 00.375-2.309l-.125-.25a2 2 0 01.374-2.308l2.733-2.733a.5.5 0 01.8.13l1.105 2.208a4.387 4.387 0 01-.822 5.064l-5.999 6a5.427 5.427 0 01-5.554 1.31l-2.414-.805a.5.5 0 01-.195-.828l2.65-2.65a2 2 0 012.31-.375l.25.124a2 2 0 002.308-.374z"
+                            fill="#335EEA"
+                          ></path>
+                        </g>
+                      </svg>
 
                       {/* Content */}
                       <div className="ms-4">
@@ -202,7 +213,7 @@ function Navbar() {
 
             <a
               className="navbar-btn btn btn-sm btn-primary lift ms-auto"
-              href={!user && "/login"}
+              href={!user ? "/login" : "#!"}
               onClick={handleAuthentication}
             >
               {user ? "Sign Out" : "Sign In"}

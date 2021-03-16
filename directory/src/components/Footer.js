@@ -73,28 +73,8 @@ function Footer() {
               {/* List */}
               <ul className="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
                 <li className="mb-3">
-                  <a href="#!" className="text-reset">
-                    Residential
-                  </a>
-                </li>
-                <li className="mb-3">
-                  <a href="#!" className="text-reset">
-                    Industrial
-                  </a>
-                </li>
-                <li className="mb-3">
-                  <a href="#!" className="text-reset">
-                    Commercial
-                  </a>
-                </li>
-                <li className="mb-3">
-                  <a href="#!" className="text-reset">
-                    Heavy Civil
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" className="text-reset">
-                    Marine
+                  <a href="/company" className="text-reset">
+                    All
                   </a>
                 </li>
               </ul>
@@ -119,7 +99,7 @@ function Footer() {
               {/* List */}
               <ul className="list-unstyled text-muted mb-0">
                 <li className="mb-3">
-                  <a href="#!" className="text-reset">
+                  <a href="/blog" className="text-reset">
                     Articles
                   </a>
                 </li>

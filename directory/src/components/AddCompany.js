@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { projectStorage, projectFirestore } from "../firebase/config";
 import { useStateValue } from "../state/StateProvider";
-import UploadCompanyImage from "./UploadCompanyImage";
 
 export default function AddCompany() {
   const [{ user }] = useStateValue();
@@ -12,7 +11,6 @@ export default function AddCompany() {
   const [description, setDescription] = useState("");
   const [longDescription, setLongDescription] = useState("");
   const [address, setAddress] = useState("");
-  const [docRefID, setDocRefID] = useState("");
   //storage
   const [file, setFile] = useState(null);
   const [url, setURL] = useState("");
@@ -126,7 +124,7 @@ export default function AddCompany() {
                     <div className="row">
                       <div className="col-12 col-md-6">
                         <div className="form-group mb-5">
-                          <label className="form-label" for="Location">
+                          <label className="form-label" htmlFor="description">
                             Industrial Specialization
                           </label>
                           <input
@@ -143,7 +141,7 @@ export default function AddCompany() {
                       </div>
                       <div className="col-12 col-md-6">
                         <div className="form-group mb-5">
-                          <label className="form-label" for="applyEmail">
+                          <label className="form-label" htmlFor="address">
                             Company Location
                           </label>
                           <input
@@ -159,7 +157,7 @@ export default function AddCompany() {
                     </div>
                     <div className="row">
                       <div className="form-group mb-5">
-                        <label className="form-label" for="applyName">
+                        <label className="form-label" htmlFor="longDescription">
                           Description of company
                         </label>
                         <input
@@ -175,7 +173,7 @@ export default function AddCompany() {
                       </div>
                     </div>
                     <div className="row">
-                      <label className="form-label" for="applyName">
+                      <label className="form-label" htmlFor="file">
                         Image of company
                       </label>
                       <div className="form-group mb-5">

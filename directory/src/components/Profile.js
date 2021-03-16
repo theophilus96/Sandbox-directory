@@ -19,6 +19,8 @@ export default function Profile() {
   const [FormUserRole, setFormUserRole] = useState("");
   const [FormUserBio, setFormUserBio] = useState("");
 
+  const [checked, setChecked] = useState(true);
+
   const changeHandler = e =>{
       console.log("changed")
   } 
@@ -107,7 +109,7 @@ export default function Profile() {
                       <div className="col-12 col-md-12">
                         {/* <!-- Name --> */}
                         <div className="form-group">
-                          <label className="form-label" for="name">
+                          <label className="form-label" htmlFor="name">
                             Name
                           </label>
                           <input
@@ -138,7 +140,7 @@ export default function Profile() {
                       <div className="col-12 col-md-6">
                         {/* <!-- Name --> */}
                         <div className="form-group">
-                          <label className="form-label" for="company">
+                          <label className="form-label" htmlFor="company">
                             Company
                           </label>
                           <input
@@ -156,7 +158,7 @@ export default function Profile() {
                       <div className="col-12 col-md-6">
                         {/* <!-- Email --> */}
                         <div className="form-group">
-                          <label className="form-label" for="role">
+                          <label className="form-label" htmlFor="role">
                             Role
                           </label>
                           <input
@@ -330,7 +332,7 @@ export default function Profile() {
                               className="form-check-input"
                               type="checkbox"
                               id="switchOne"
-                              checked
+                              onChange={() => setChecked(!checked)}
                             />
                           </div>
                         </div>
@@ -354,7 +356,7 @@ export default function Profile() {
                               className="form-check-input"
                               type="checkbox"
                               id="switchTwo"
-                              checked
+                              onChange={() => setChecked(!checked)}
                             />
                           </div>
                         </div>

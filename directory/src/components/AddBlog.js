@@ -104,7 +104,7 @@ export default function AddBlog() {
                   <div className="row">
                     <div className="col-12 col-md-6">
                       <div className="form-group mb-5">
-                        <label className="form-label" for="applyName">
+                        <label className="form-label" htmlFor="Title">
                           Blog Title
                         </label>
                         <input
@@ -123,7 +123,7 @@ export default function AddBlog() {
                     </div>
                     <div className="col-12 col-md-6">
                       <div className="form-group mb-5">
-                        <label className="form-label" for="applyEmail">
+                        <label className="form-label" htmlFor="shortDesc">
                           Short Description
                         </label>
                         <input
@@ -139,7 +139,7 @@ export default function AddBlog() {
                   </div>
                   <div className="row">
                     <div className="form-group mb-5">
-                      <label className="form-label" for="applyName">
+                      <label className="form-label" htmlFor="longDesc">
                         Blog
                       </label>
                       <input
@@ -153,7 +153,7 @@ export default function AddBlog() {
                     </div>
                   </div>
                   <div className="row">
-                    <label className="form-label" for="applyName">
+                    <label className="form-label" htmlFor="file">
                       Image of company
                     </label>
                     <div className="form-group mb-5">

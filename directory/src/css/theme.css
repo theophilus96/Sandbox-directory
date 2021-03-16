@@ -16592,8 +16592,7 @@ fieldset:disabled .btn {
   );
 }
 .bg-pattern-2 {
-  background-image: linear-gradient(180deg, transparent 0, #161c2d),
-    url();
+  background-image: linear-gradient(180deg, transparent 0, #161c2d)
 }
 .img-skewed {
   perspective: 1500px;

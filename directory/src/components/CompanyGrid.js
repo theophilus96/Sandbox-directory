@@ -24,29 +24,9 @@ function CompanyGrid({ match }) {
   };
   
   console.log(match);
-  const CompanyData = [
-    {
-      id: 1,
-      name: "HSL Construction",
-      description: "Marine Engineering/Construction",
-      picture: { HSLlogo },
-    },
-    {
-      id: 2,
-      name: "Theo Construction",
-      description: "Residential Construction",
-      picture: { MBSlogo },
-    },
-    {
-      id: 3,
-      name: "John Engineering",
-      description: "Civil Engineering",
-      picture: { CraneLogo },
-    },
-  ];
 
   const { docs } = useFirestore("company");
-  console.log(docs);
+  // console.log(docs);
 
   return (
     <div>
@@ -274,7 +254,7 @@ function CompanyGrid({ match }) {
           </div>
         </div>
       </section>
-      <AddCompany />
+      {user ? <AddCompany /> : null}
     </div>
   );
 }

@@ -14,7 +14,6 @@ import SignUp from "./components/SignUp";
 import Home from "./pages/Home";
 import Company from "./pages/Company";
 import Blog from "./pages/Blog";
-import TempCompanyGrid from "./components/TempCompanyGrid";
 import HSL from "./pages/HSL";
 import BlogPost from "./pages/BlogPost";
 import Problem from "./pages/Problem";
@@ -53,7 +52,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <TestNavBar/> */}
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />

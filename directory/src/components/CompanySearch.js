@@ -20,7 +20,7 @@ function CompanySearch() {
 
           {/* Text */}
           <span className="input-group-text border-0 py-0 ps-1 pe-3">
-            <a className="btn btn-sm btn-primary" href="blog-search.html">
+            <a className="btn btn-sm btn-primary" href="#!">
               Search
             </a>
           </span>

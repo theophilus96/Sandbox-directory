@@ -51,7 +51,7 @@ export default function Contact() {
             <div className="col-12 text-center">
               {/* <!-- Button --> */}
               <a
-                href="#info"
+                href="#!"
                 className="btn btn-white btn-rounded-circle shadow mt-n11 mt-md-n13"
                 data-scroll
               >
@@ -120,7 +120,7 @@ export default function Contact() {
                   <div className="col-12 col-md-6">
                     <div className="form-group mb-5">
                       {/* <!-- Label --> */}
-                      <label className="form-label" for="contactName">
+                      <label className="form-label" htmlFor="contactName">
                         Full name
                       </label>
 
@@ -136,7 +136,7 @@ export default function Contact() {
                   <div className="col-12 col-md-6">
                     <div className="form-group mb-5">
                       {/* <!-- Label --> */}
-                      <label className="form-label" for="contactEmail">
+                      <label className="form-label" htmlFor="contactEmail">
                         Email
                       </label>
 
@@ -154,7 +154,7 @@ export default function Contact() {
                   <div className="col-12">
                     <div className="form-group mb-7 mb-md-9">
                       {/* <!-- Label --> */}
-                      <label className="form-label" for="contactMessage">
+                      <label className="form-label" htmlFor="contactMessage">
                         What can we help you with?
                       </label>
 

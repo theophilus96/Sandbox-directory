@@ -2,7 +2,6 @@ import React from "react";
 import FacebookIcon from "../icons/facebook.svg";
 import InstagramIcon from "../icons/instagram.svg";
 import TwitterIcon from "../icons/twitter.svg";
-import useFirestore from "../hooks/useFirestore";
 import { useParams } from "react-router-dom";
 import { projectFirestore } from "../firebase/config";
 import { useState, useEffect } from "react";
@@ -79,7 +78,7 @@ export default function Article(doc) {
                   <h6 className="text-uppercase mb-0">{articleData.author}</h6>
 
                   {/* <!-- Date --> */}
-                  <time className="fs-sm text-muted" datetime="2019-05-20">
+                  <time className="fs-sm text-muted" dateTime={new Date(articleData.date?.seconds * 1000).toDateString("en-US")}>
                     Published on {new Date(articleData.date?.seconds * 1000).toDateString("en-US")}
                   </time>
                 </div>
