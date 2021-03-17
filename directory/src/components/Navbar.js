@@ -133,7 +133,7 @@ function Navbar() {
               </li>
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle btn disabled"
                   id="navbarPages"
                   data-bs-toggle="dropdown"
                   href="#!"
