@@ -133,12 +133,9 @@ function Navbar() {
               </li>
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle btn disabled"
+                  className="nav-link dropdown-toggle"
                   id="navbarPages"
-                  data-bs-toggle="dropdown"
-                  href="#!"
-                  aria-haspopup="true"
-                  aria-expanded="false"
+                  href="https://sandbox-social.web.app/"
                 >
                   Social
                 </a>
