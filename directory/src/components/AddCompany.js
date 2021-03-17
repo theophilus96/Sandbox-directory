@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { projectStorage, projectFirestore } from "../firebase/config";
+import useFirestore from "../hooks/useFirestore";
 import { useStateValue } from "../state/StateProvider";
 
 export default function AddCompany() {
@@ -27,6 +28,7 @@ export default function AddCompany() {
   //    description
   //    longDescription
   //    image
+  // companyID
   
 
 
@@ -93,10 +95,10 @@ export default function AddCompany() {
                             placeholder="Company Name"
                             value={companyName}
                             name="Company Name"
-                            /* onChange takes the event and set it to whatever
-      is currently in the input. 'e' is equal to the event
-      happening. currentTarget.value is what is inputted
-       */
+      //                        onChange takes the event and set it to whatever
+      // is currently in the input. 'e' is equal to the event
+      // happening. currentTarget.value is what is inputted
+       
                             onChange={(e) =>
                               setCompanyName(e.currentTarget.value)
                             }
@@ -191,7 +193,7 @@ export default function AddCompany() {
                       </div>
                       <div className="col-12 col-md-auto">
                         <p className="fs-sm text-muted mb-0">
-                          Application will be send securely and remain private
+                          Application will be securely sent and remain private
                         </p>
                       </div>
                     </div>

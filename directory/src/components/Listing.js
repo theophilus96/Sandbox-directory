@@ -71,7 +71,7 @@ export default function Listing() {
                       <tr key={doc.id}>
                         <td>
                           <a
-                            href="#!"
+                            href={`/company/${doc.companyID}`}
                             className="text-reset text-decoration-none"
                           >
                             <p className="mb-1">{doc.title}</p>
@@ -82,7 +82,7 @@ export default function Listing() {
                         </td>
                         <td>
                           <a
-                            href="#!"
+                            href={`/company/${doc.companyID}`}
                             className="text-reset text-decoration-none"
                           >
                             <p className="fs-sm mb-0">{doc.company}</p>
@@ -90,7 +90,7 @@ export default function Listing() {
                         </td>
                         <td>
                           <a
-                            href="#!"
+                            href={`/company/${doc.companyID}`}
                             className="text-reset text-decoration-none"
                           >
                             <p className="fs-sm mb-0">{doc.location}</p>
@@ -157,7 +157,7 @@ export default function Listing() {
                       <tr key={doc.id}>
                         <td>
                           <a
-                            href="#!"
+                            href={`/company/${doc.companyID}`}
                             className="text-reset text-decoration-none"
                           >
                             <p className="mb-1">{doc.title}</p>
@@ -168,7 +168,7 @@ export default function Listing() {
                         </td>
                         <td>
                           <a
-                            href="#!"
+                            href={`/company/${doc.companyID}`}
                             className="text-reset text-decoration-none"
                           >
                             <p className="fs-sm mb-0">{doc.company}</p>
@@ -176,7 +176,7 @@ export default function Listing() {
                         </td>
                         <td>
                           <a
-                            href="#!"
+                            href={`/company/${doc.companyID}`}
                             className="text-reset text-decoration-none"
                           >
                             <p className="fs-sm mb-0">{doc.location}</p>
@@ -243,7 +243,7 @@ export default function Listing() {
                       <tr key={doc.id}>
                         <td>
                           <a
-                            href="#!"
+                            href={`/company/${doc.companyID}`}
                             className="text-reset text-decoration-none"
                           >
                             <p className="mb-1">{doc.title}</p>
@@ -254,7 +254,7 @@ export default function Listing() {
                         </td>
                         <td>
                           <a
-                            href="#!"
+                            href={`/company/${doc.companyID}`}
                             className="text-reset text-decoration-none"
                           >
                             <p className="fs-sm mb-0">{doc.company}</p>
@@ -262,7 +262,7 @@ export default function Listing() {
                         </td>
                         <td>
                           <a
-                            href="#!"
+                            href={`/company/${doc.companyID}`}
                             className="text-reset text-decoration-none"
                           >
                             <p className="fs-sm mb-0">{doc.location}</p>
@@ -329,7 +329,7 @@ export default function Listing() {
                       <tr key={doc.id}>
                         <td>
                           <a
-                            href="#!"
+                            href={`/company/${doc.companyID}`}
                             className="text-reset text-decoration-none"
                           >
                             <p className="mb-1">{doc.title}</p>
@@ -340,7 +340,7 @@ export default function Listing() {
                         </td>
                         <td>
                           <a
-                            href="#!"
+                            href={`/company/${doc.companyID}`}
                             className="text-reset text-decoration-none"
                           >
                             <p className="fs-sm mb-0">{doc.company}</p>
@@ -348,7 +348,7 @@ export default function Listing() {
                         </td>
                         <td>
                           <a
-                            href="#!"
+                            href={`/company/${doc.companyID}`}
                             className="text-reset text-decoration-none"
                           >
                             <p className="fs-sm mb-0">{doc.location}</p>

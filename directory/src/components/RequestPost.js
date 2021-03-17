@@ -215,7 +215,7 @@ function RequestPost() {
                 href="/listing"
                 className="btn w-100 btn-primary d-flex align-items-center lift"
               >
-                View {design.length+engineering.length+general.length+support.length} other request{" "}
+                Post your request here{" "}
                 <i className="fe fe-arrow-right ms-auto"></i>
               </a>
             </div>

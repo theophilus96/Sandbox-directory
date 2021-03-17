@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { projectFirestore } from "../firebase/config";
+import useFirestore from "../hooks/useFirestore";
 import { useStateValue } from "../state/StateProvider";
 
 export default function AddRequest() {
@@ -11,6 +12,7 @@ export default function AddRequest() {
   const [description, setDescription] = useState("");
   const [type, setType] = useState("");
   const [location, setLocation] = useState("");
+  const [companyID, setCompanyID] = useState("");
 
   /* The onSubmit function we takes the 'e'
     or event and submits it to Firebase
@@ -18,6 +20,8 @@ export default function AddRequest() {
   useEffect(() => {
     console.log("type: ", type);
   }, [type, setType]);
+
+  const { docs } = useFirestore("company");
 
   const userEmail = user.email;
   const onSubmit = (e) => {
@@ -36,6 +40,7 @@ export default function AddRequest() {
         userEmail,
         description,
         location,
+        companyID
       })
       //.then will reset the form to nothing
       .then(
@@ -81,14 +86,46 @@ export default function AddRequest() {
                         <label className="form-label" for="applyEmail">
                           Company
                         </label>
-                        <input
+                        {/* <input
                           className="form-control"
                           placeholder="Company"
                           value={company}
                           name="company"
                           onChange={(e) => setCompany(e.currentTarget.value)}
                           type="text"
-                        ></input>
+                        ></input> */}
+                        <div class="dropdown me-1 mb-1">
+                          <button
+                            class="btn btn-primary dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButtonTwo"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            {company ? company : "Select Company"}
+                          </button>
+                          <div
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButtonTwo"
+                            style={{ margin: 0 }}
+                          >
+                            {docs &&
+                              docs.map((doc) => (
+                                <a
+                                  class="dropdown-item"
+                                  href="#!"
+                                  onClick={(e) => {
+                                    setCompany((doc.name));
+                                    setCompanyID(doc.id);
+                                  }}
+                                  value={doc.name}
+                                >
+                                  {doc.name}
+                                </a>
+                              ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -112,7 +149,7 @@ export default function AddRequest() {
                     <div className="col-12 col-md-6">
                       <div className="form-group mb-5">
                         <label className="form-label" for="applyEmail">
-                          Type of problem 
+                          Type of problem
                         </label>
 
                         {/* <input
@@ -133,7 +170,7 @@ export default function AddRequest() {
                             aria-haspopup="true"
                             aria-expanded="false"
                           >
-                            { type? type: "Select Problem"}
+                            {type ? type : "Select Problem"}
                           </button>
                           <div
                             class="dropdown-menu"
@@ -200,7 +237,7 @@ export default function AddRequest() {
                     </div>
                     <div className="col-12 col-md-auto">
                       <p className="fs-sm text-muted mb-0">
-                        Application will be send securely and remain private
+                        Application will be securely sent and remain private
                       </p>
                     </div>
                   </div>

@@ -171,7 +171,7 @@ export default function AddBlog() {
                     </div>
                     <div className="col-12 col-md-auto">
                       <p className="fs-sm text-muted mb-0">
-                        Application will be send securely and remain private
+                        Application will be securely sent and remain private
                       </p>
                     </div>
                   </div>
