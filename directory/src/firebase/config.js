@@ -2,6 +2,7 @@ import firebase from 'firebase/app'
 import "firebase/storage";
 import "firebase/firestore";
 import 'firebase/auth'
+import "firebase/performance";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -22,5 +23,6 @@ const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
 const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 const auth = firebase.auth();
+const perf = firebase.performance();
 
-export { projectStorage, projectFirestore, timestamp, auth };
+export { projectStorage, projectFirestore, timestamp, auth, perf };
