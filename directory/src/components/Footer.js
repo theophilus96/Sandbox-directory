@@ -4,8 +4,6 @@ import TwitterLogo from "../icons/twitter.svg";
 import InstagramLogo from "../icons/instagram.svg";
 import PinterestLogo from "../icons/pinterest.svg";
 import SandBoxLogo from "../icons/SandboxLogo.png";
-import { Link } from "react-router-dom";
-
 function Footer() {
   return (
     <div>
@@ -86,7 +84,7 @@ function Footer() {
               {/* List */}
               <ul className="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
                 <li className="mb-3">
-                  <a href="#!" className="text-reset">
+                  <a href="https://sandbox-social.web.app/" className="text-reset">
                     Sandbox-social
                   </a>
                 </li>

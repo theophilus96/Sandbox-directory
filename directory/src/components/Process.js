@@ -8,7 +8,7 @@ function Process() {
     <div>
       {/* PROCESS */}
       <section className="pt-8 pt-md-11">
-        <div className="container">
+        <div className="container py-8 pt-md-11 pb-md-9  border-top">
           <div className="row align-items-center justify-content-between">
             <div className="col-12 col-md-6">
               {/* Preheading */}

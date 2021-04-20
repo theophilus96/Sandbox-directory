@@ -84,7 +84,7 @@ function About() {
 
                 <div className="ms-5">
                   {/* Heading */}
-                  <h4 className="mb-1">Ordered information</h4>
+                  <h4 className="mb-1">Company Directory</h4>
 
                   {/* Text */}
                   <p className="text-muted mb-5">
@@ -122,11 +122,11 @@ function About() {
 
                 <div className="ms-5">
                   {/* Heading */}
-                  <h4 className="mb-1">Request Viewer</h4>
+                  <h4 className="mb-1">Request Listing</h4>
 
                   {/* Text */}
                   <p className="text-muted mb-0">
-                    Find your next client or partner her
+                    Find your next client or partner here
                   </p>
                 </div>
               </div>

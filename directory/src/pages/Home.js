@@ -9,11 +9,13 @@ import Stats from "../components/Stats";
 import Steps from "../components/Steps";
 import Welcome from "../components/Welcome";
 import BottomImage from "../components/BottomImage";
+import Introduction from "../components/Introduction";
 
 function Home() {
   return (
     <div>
       <Welcome />
+      <Introduction />
       <Process />
       <Steps />
       <Shape />

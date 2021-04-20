@@ -119,9 +119,9 @@ function Navbar() {
                             <h6 className="dropdown-header">Types</h6>
 
                             {/* List */}
-                            <a className="dropdown-item" href="/company">
+                            <Link className="dropdown-item" to="/company">
                               all
-                            </a>
+                            </Link>
                           </div>
                         </div>{" "}
                         {/* / .row */}
@@ -131,9 +131,9 @@ function Navbar() {
                   {/* / .row */}
                 </div>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className="nav-link"
                   id="navbarPages"
                   href="https://sandbox-social.web.app/"
                 >
@@ -141,9 +141,9 @@ function Navbar() {
                 </a>
                 {/* / .row */}
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item">
                 <Link
-                  className="nav-link dropdown-toggle"
+                  className="nav-link"
                   id="navbarAccount"
                   to="/blog"
                 >

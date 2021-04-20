@@ -29,8 +29,6 @@ export default function AddCompany() {
   //    longDescription
   //    image
   // companyID
-  
-
 
   const onSubmit = (e) => {
     /* 
@@ -54,7 +52,7 @@ export default function AddCompany() {
       async () => {
         const url = await storageRef.getDownloadURL();
         //   const createdAt = timestamp();
-        await collectionRef.add({
+        const newCompanyAdded = await collectionRef.add({
           name: companyName,
           phone,
           description,
@@ -63,6 +61,13 @@ export default function AddCompany() {
           image: url,
           userEmail: user.email,
         });
+        console.log("the new Company:", newCompanyAdded);
+        console.log("it's id:", newCompanyAdded.id);
+
+        collectionRef.doc(newCompanyAdded.id).collection('project').add({
+          image: url,
+        })
+
         setCompanyName("");
         setPhone("");
         setAddress("");
@@ -95,10 +100,10 @@ export default function AddCompany() {
                             placeholder="Company Name"
                             value={companyName}
                             name="Company Name"
-      //                        onChange takes the event and set it to whatever
-      // is currently in the input. 'e' is equal to the event
-      // happening. currentTarget.value is what is inputted
-       
+                            //                        onChange takes the event and set it to whatever
+                            // is currently in the input. 'e' is equal to the event
+                            // happening. currentTarget.value is what is inputted
+
                             onChange={(e) =>
                               setCompanyName(e.currentTarget.value)
                             }
